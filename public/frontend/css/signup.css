@@ -1,0 +1,184 @@
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+
+.registration-background-image{
+    background-image:url('../images/inovation.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  /* logo purpose */
+  .logo {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    width: 80px; /* Adjust the size of the circle */
+    height: 80px; /* Adjust the size of the circle */
+    border-radius: 50%; /* Make it circular */
+    background-color: #fff; /* Background color of the logo */
+    overflow: hidden;
+    z-index: 1000; /* Set a high z-index to ensure the logo appears above other content */
+}
+
+/* CSS to make the image fit inside the circle */
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Optional: Add a border and box shadow for styling */
+.logo {
+    border: 2px solid #333; /* Adjust border color and thickness as needed */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+}
+
+.registration{
+    background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+}
+.signup_register{
+    background-color: #d99058;
+background-image: linear-gradient(315deg, #d99058 0%, #f8de7e 74%);
+}
+/* Define the keyframes for the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the fade-in animation to the image */
+#animated-img {
+    animation: fadeIn 1s ease-in-out; /* Change the duration and timing function as needed */
+}
+
+/* Style for form container */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Style for form group */
+.form-group {
+    margin-bottom: 20px;
+    flex: 1 1 calc(50% - 10px); /* Equal width for each form group with some spacing */
+    margin-right: 20px; /* Spacing between form groups */
+}
+
+/* Style for labels */
+label {
+    display: block;
+    font-weight: bold;
+}
+
+/* Style for select boxes */
+.form-select {
+    position: relative;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    appearance: none;
+}
+
+/* Style for select icon */
+.select-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+/* Style for select icon (chevron down) */
+.select-icon i {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Clear margin for the last form group in a row */
+.form-group:nth-child(2n) {
+    margin-right: 0;
+}
+.button_reset{
+    margin-right: 42%;
+}
+
+/* //below image */
+
+.signup-card {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin-bottom: 18%;
+    margin-left: 22%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling for the card text */
+.signup-card p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .col-xl-6 {
+        display: block;
+    }
+    .col-xl-6 img {
+        border-radius: 0;
+    }
+    .signup-card {
+        position: static;
+        margin: 20px auto;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .signup-card p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .signup-card {
+        padding: 15px;
+    }
+    .signup-card p {
+        font-size: 0.9rem;
+    }
+}
+

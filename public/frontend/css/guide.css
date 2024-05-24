@@ -1,0 +1,37 @@
+.header-guide{
+    font-size: 55px;
+    font-weight:700 ;
+    color:rgb(124, 124, 241);
+
+}
+.guide-text{
+    font-size: 25px;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+.card{
+    box-shadow: 5px 10px 8px #888888;
+}
+.logo {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    width: 80px; /* Adjust the size of the circle */
+    height: 80px; /* Adjust the size of the circle */
+    border-radius: 50%; /* Make it circular */
+    background-color: #fff; /* Background color of the logo */
+    overflow: hidden;
+    z-index: 1000; /* Set a high z-index to ensure the logo appears above other content */
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Optional: Add a border and box shadow for styling */
+.logo {
+    border: 2px solid #333; /* Adjust border color and thickness as needed */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+}

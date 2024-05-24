@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+/* CSS for the logo */
+.logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+/* CSS to make the image fit inside the circle */
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Optional: Add a border and box shadow for styling */
+.logo {
+    border: 2px solid #333;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    max-width: 70em;
+    flex-direction: row;
+    margin: 3em auto;
+    background-color: rgb(153, 152, 152);
+    transition: margin 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    border-color: #007bff;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.summary {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.summary:hover {
+    color: blue;
+    font-weight: 600;
+}
+
+.card.dark {
+    color: #fff;
+}
+
+.card.card.bg-light-subtle .card-title {
+    color: dimgrey;
+}
+
+.card-text {
+    font-size: 20px;
+}
+
+.card img {
+    max-width: 25%;
+    margin: auto;
+    padding: 0.5em;
+    border-radius: 0.7em;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-section {
+    max-width: 60%;
+}
+
+.cta-section {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.cta-section .btn {
+    padding: 0.3em 0.5em;
+}
+
+.card.bg-light-subtle .cta-section .btn {
+    background-color: #898989;
+    border-color: #898989;
+}
+
+@media screen and (max-width: 767px) {
+    .card {
+        flex-direction: column;
+        font-size: 0.9em;
+    }
+
+    .card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .card-body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-section, .cta-section {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .cta-section {
+        margin-top: 1em;
+        align-items: center;
+    }
+}

@@ -1,0 +1,43 @@
+.modal-dialog-bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  #chatbox {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  #messages {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #userInput {
+    margin-top: 10px;
+  }
+  .btn-1{
+    border-radius: 50%;
+  }
+  .modal-title {
+    font-size: 1.25em;
+
+    color: #333;
+    margin-left: 62px;
+  }
+  .modal-content{
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    box-shadow:10px 7px 10px violet;
+
+
+
+    margin-right: 20px;
+
+
+  }

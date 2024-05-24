@@ -1,0 +1,63 @@
+ .card {
+            transition: transform 0.2s;
+            box-shadow: 5px 10px 8px #888888;
+
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+}
+.bgimage_1{
+    background-image: url("{{url('frontend/images/still-life-851328_1280.jpg')}}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.bgimage_1 {
+    background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.about-text {
+    color: rgb(246, 73, 64);
+    font-weight: 700;
+    text-align: center;
+}
+
+.about-para {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.card-title {
+    color: rgb(246, 73, 64);
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 767px) {
+    .about-text {
+        margin-left: 0;
+    }
+
+    .about-para {
+        font-size: 18px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+}
