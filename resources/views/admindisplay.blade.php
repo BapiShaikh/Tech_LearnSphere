@@ -3,75 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Display Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <style>
         body {
             padding: 20px;
-            background-color: #94c2f0;
-        }
-        .table-responsiv {
-            margin-top: 20px;
-        }
-        table {
-            background-color: white;
-
-        }
-        table tr,td,th{
-            border: 1px solid;
-
-        }
-        tr{
-            background-color: rgb(246, 177, 169);
-        }
-        th, td {
-            text-align: center;
-            vertical-align: middle;
-        }
-        th {
-            background-color: #343a40;
-            color: white;
-        }
-        .table-hover tbody tr:hover {
-            background-color: #f1f1f1;
-        }
-        .btn-action {
-            margin-right: 5px;
-        }
-        img {
-            border-radius: 50%;
-        }
-        .display-center{
-            margin-left:45vw;
+            background-color: #f0f8ff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 600;
-            font-style: oblique;
         }
-        .action{
-            width:50px;
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
         }
-        .action-1{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
         }
-        .btn-action {
-            display: block;
-            width: 100%; /* Make buttons take full width of the grid cell */
-        }
-
-
         .button-container {
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
             align-items: center;
-            gap: 10px; /* Adjust spacing between buttons */
-            margin-bottom: 10px; /* Adjust spacing between buttons and form */
+            margin-bottom: 20px;
         }
-
-        .logout-admin, .search-btn, .search-form button {
-            display: inline-block;
+        .search-form {
+            display: flex;
+            align-items: center;
+        }
+        .form-group {
+            margin: 0;
+        }
+        .form-control {
+            margin-right: 10px;
+        }
+        .logout-admin {
             padding: 10px 20px;
             font-size: 16px;
             border: none;
@@ -79,117 +43,158 @@
             text-align: center;
             text-decoration: none;
             color: #fff;
-
+            background-color: #dc3545;
             border-radius: 5px;
         }
-
         .logout-admin a {
             color: #fff;
             text-decoration: none;
         }
-
-        .search-form {
+        .profile-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        .profile-card:hover {
+            transform: translateY(-10px);
+        }
+        .profile-header {
             display: flex;
             align-items: center;
+            margin-bottom: 20px;
         }
-
-        .form-group {
+        .profile-header img {
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            margin-right: 20px;
+        }
+        .profile-header h2 {
             margin: 0;
+            font-size: 1.5rem;
+            color: #333;
         }
-
-        .form-control {
-            margin-right: 10px;
+        .profile-info {
+            display: flex;
+            flex-wrap: wrap;
         }
-
-
-
+        .profile-info div {
+            flex: 1 1 50%;
+            padding: 10px 0;
+        }
+        .profile-info label {
+            font-weight: bold;
+            color: #555;
+        }
+        .profile-info span {
+            color: #333;
+        }
+        .action-buttons {
+            margin-top: 20px;
+            text-align:left;
+        }
+        .btn-action {
+            margin: 5px;
+        }
+        .btn1 {
+            margin-left:1px;
+        }
 
     </style>
 </head>
 <body>
-    <div class="modal-header">
-        <header>
-            <h1 class="display-center">Admin Data</h1>
-        </header>
+    <div class="header">
+        <h1>Admin Data</h1>
     </div>
     <div class="button-container">
-
-        <button id="toggle-search" class="btn btn-primary search-btn">Search</button>
-        <button class="btn btn-danger logout-admin"><a href="{{url('logout')}}">Logout</a></button>
+        <button id="toggle-search" class="btn btn-primary">Search</button>
+        <button class="logout-admin"><a href="{{url('logout')}}">Logout</a></button>
         <form action="" class="search-form" id="search-form" style="display: none;">
-            <div class="form-group col-9">
+            <div class="form-group">
                 <input type="search" name="search" id="search-input" class="form-control" placeholder="Search by name or email" value="{{request('search')}}">
             </div>
             <button type="submit" class="btn btn-primary">Go</button>
         </form>
     </div>
 
-
-
-@if(isset($allInfo))
-
-      <div class="table-responsive">
-        <table class="table table-hover table-border">
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Phone</th>
-                <th>Pincode</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>City</th>
-                <th>Course</th>
-                <th>DOB</th>
-                <th>Email</th>
-                <th>Address</th>
-                <th>Password</th>
-                <th>Image</th>
-                <th class="action">Action</th>
-            </tr>
+    @if($allInfo)
+    <div class="container">
+        <div class="row">
             @foreach($allInfo->all() as $all)
-            <tr>
-                <td>{{$all->fname}}</td>
-                <td>{{$all->lname}}</td>
-                <td><a href="tel:{{$all->phone}}">{{$all->phone}}</a></td>
-                <td>{{$all->pincode}}</td>
-                <td>{{$all->age}}</td>
-                <td>{{$all->gender}}</td>
-                <td>{{$all->city}}</td>
-                <td>{{$all->course}}</td>
-                <td>{{$all->date}}</td>
-
-                <td><a href="mailto:{{$all->email}}">{{$all->email}}</a></td>
-                <td>{{$all->address}}</td>
-                <td>{{$all->password}}</td>
-
-                <td><img src="{{$all->image}}" height="100px" width="100px" ></td>
-                <td class="action-1">
-                    <a href="{{url('/edit')}}{{$all->user_id}}" class="btn btn-primary btn-action">Edit</a>
-                    <a href="{{url('/delete')}}{{$all->user_id}}" class="btn btn-danger btn-action">Delete</a>
-                    <a href="{{url('/block')}}{{$all->user_id}}" class="btn btn-warning btn-action">Block</a>
-                    <a href="{{url('/unblock')}}{{$all->user_id}}" class="btn btn-success btn-action">Unblock</a>
-
-                </td>
-            </tr>
+                <div class="col-md-4">
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <img src="{{ $all->image ?? 'default.jpg' }}" alt="Profile Image">
+                            <div>
+                                <h2>{{ $all->fname ?? 'First Name' }} {{ $all->lname ?? 'Last Name' }}</h2>
+                                <p><a href="mailto:{{ $all->email ?? '#' }}">{{ $all->email ?? 'Email' }}</a></p>
+                                <p><a href="tel:{{ $all->phone ?? '#' }}">{{ $all->phone ?? 'Phone' }}</a></p>
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <div>
+                                <label>City:</label>
+                                <span>{{ $all->city ?? 'N/A' }}</span>
+                            </div>
+                            <div>
+                                <label>Course:</label>
+                                <span>{{ $all->course ?? 'N/A' }}</span>
+                            </div>
+                            <div>
+                                <label>Age:</label>
+                                <span>{{ $all->age ?? 'N/A' }}</span>
+                            </div>
+                            <div>
+                                <label>Gender:</label>
+                                <span>{{ $all->gender ?? 'N/A' }}</span>
+                            </div>
+                            <div>
+                                <label>Date of Birth:</label>
+                                <span>{{ $all->date ?? 'N/A' }}</span>
+                            </div>
+                            <div>
+                                <label>Address:</label>
+                                <span>{{ $all->address ?? 'N/A' }}</span>
+                            </div>
+                            <div>
+                                <label>Pincode:</label>
+                                <span>{{ $all->pincode ?? 'N/A' }}</span>
+                            </div>
+                            <div>
+                                <label>Password:</label>
+                                <span>{{ $all->password ?? 'N/A' }}</span>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="{{url('/edit')}}{{$all->user_id}}" class="btn btn-primary btn-action btn1">Edit</a>
+                            <a href="{{url('/delete')}}{{$all->user_id}}" class="btn btn-danger btn-action btn1">Delete</a>
+                            <a href="{{url('/block')}}{{$all->user_id}}" class="btn btn-warning btn-action btn1">Block</a>
+                            <a href="{{url('/unblock')}}{{$all->user_id}}" class="btn btn-success btn-action btn1">Unblock</a>
+                        </div>
+                    </div>
+                </div>
             @endforeach
-        </tbody>
-    </table>
-</div>
+        </div>
+    </div>
 @endif
-</div>
-<script>
-    document.getElementById('toggle-search').addEventListener('click', function() {
-        var searchForm = document.getElementById('search-form');
-        if (searchForm.style.display === 'none' || searchForm.style.display === '') {
-            searchForm.style.display = 'flex';
-        } else {
-            searchForm.style.display = 'none';
-        }
-    });
-</script>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.getElementById('toggle-search').addEventListener('click', function() {
+            var searchForm = document.getElementById('search-form');
+            if (searchForm.style.display === 'none' || searchForm.style.display === '') {
+                searchForm.style.display = 'flex';
+            } else {
+                searchForm.style.display = 'none';
+            }
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
