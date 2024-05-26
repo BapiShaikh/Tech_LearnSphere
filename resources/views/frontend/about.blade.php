@@ -15,17 +15,40 @@
 
     <style>
       /* Style the search bar (you can customize this as needed) */
-      .search-bar {
-          display: none; /* Initially hide the search bar */
+      .cir{
+        border-radius:50%;
+        border: 1px solid;
+        margin-right: 10px;
       }
+      .cir-text{
 
+        margin-right: 5px;
+      }
+      .guest {
+        display: flex;
+        justify-content: flex-end; /* Align the container to the right */
+    }
+
+    .right-corner {
+        display: flex; /* Use flexbox to position elements side by side */
+    }
+
+    .right-corner > * {
+        margin-left: 10px; /* Add some spacing between the elements */
+    }
+    .sticky-navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1020; /* Ensure it stays on top of other elements */
+
+      }
 
   </style>
 
 
   </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid sticky-navbar">
         <!-- navigation bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
@@ -78,21 +101,27 @@
       <a class="nav-link disabled" href="#">Disabled</a>
     </li> -->
   </ul>
-  <form class="form-inline my-2 my-lg-0" id="searchForm" style="display: none;">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-</form>
+
 
 <!-- Search icon -->
-<i class="bi bi-search clickable" id="searchIcon"></i>
+
 <form class="form-inline my-2 my-lg-0">
 
-  <!-- <button class="btn btn-outline-success my-2 my-sm-0" id="login" type="submit">
-    <a href="login.html">Login</a></button> -->
-    <a href="{{url('login')}}" class="btn btn-primary my-2 my-sm-0" id="login" type="submit">Login</a>
-    <a href="{{url('signup')}}" class="btn btn-success my-2 my-sm-0" id="login" type="submit">Create Account</a>
+    @if(session()->has('name'))
+    <div class="cir-text">
+      {{session()->get('name')}}
+  </div>
+      <img src="{{session()->get('image')}}" alt="" width="50" class="cir">
+      <a href="{{url('logout')}}" class="btn btn-danger my-2 my-sm-0" id="logout" type="submit">Logout</a>
+      @else
+      <div class="guest">
+          <div class="right-corner">
+      <p class="cir-text">GuestUser</p>
+      <a href="{{url('login')}}" class="btn btn-primary my-2 my-sm-0" id="login" type="submit">Login</a>
+      </div>
+  </div>
 
-  <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Create Account</button> -->
+    @endif
 
 </form>
 
@@ -342,20 +371,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script>
-    // Get search form and search icon elements
-    var searchForm = document.getElementById('searchForm');
-  var searchIcon = document.getElementById('searchIcon');
 
-  // Add click event listener to the search icon
-  searchIcon.addEventListener('click', function() {
-      // Toggle visibility of search form
-      if (searchForm.style.display === 'none') {
-          searchForm.style.display = 'block';
-      } else {
-          searchForm.style.display = 'none';
-      }
-  });
-</script>
+
 </body>
 </html>

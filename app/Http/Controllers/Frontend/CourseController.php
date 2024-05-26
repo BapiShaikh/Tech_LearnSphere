@@ -10,7 +10,14 @@ class CourseController extends Controller
 {
     //
     public function index(){
-        return view('frontend.course');
+        $name=session()->get('name');
+        if(isset($name)){
+            return view('frontend.course')->with(['name'=>$name]);
+        }else{
+            return view('frontend.course');
+        }
+
+
     }
     public function guide_index(){
         return view('frontend.guide');
@@ -21,5 +28,5 @@ class CourseController extends Controller
     public function real_index(){
         return view('frontend.real');
     }
-    
+
 }

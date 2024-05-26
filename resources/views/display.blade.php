@@ -198,8 +198,8 @@
                                     <span>{{$all->city}}</span>
                                 </div>
                                 <div>
-                                    <label>Course:</label>
-                                    <span>{{$all->course}}</span>
+                                    <label>Qualification:</label>
+                                    <span>{{$all->qualification}}</span>
                                 </div>
                                 <div>
                                     <label>Date of Birth:</label>

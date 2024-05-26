@@ -30,6 +30,27 @@
       .s{
         background-color :rgb(124, 124, 247);
       }
+      .cir{
+        border-radius:50%;
+        border: 1px solid;
+        margin-right: 10px;
+      }
+      .cir-text{
+
+        margin-right: 5px;
+      }
+      .guest {
+        display: flex;
+        justify-content: flex-end; /* Align the container to the right */
+    }
+
+    .right-corner {
+        display: flex; /* Use flexbox to position elements side by side */
+    }
+
+    .right-corner > * {
+        margin-left: 10px; /* Add some spacing between the elements */
+    }
   </style>
   </head>
 <body>
@@ -83,15 +104,29 @@
                   </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0" id="searchForm" style="display: none;">
-                  <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control mr-sm-2" type="search" id="searchInput" name="search" placeholder="Search" aria-label="Search">
                   <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
                 </form>
 
                 <!-- Search icon -->
                 <i class="bi bi-search clickable" id="searchIcon"></i>
                 <form class="form-inline my-2 my-lg-0">
-                  <a href="{{url('login')}}" class="btn btn-primary my-2 my-sm-0" id="login" type="submit">Login</a>
-                  <a href="{{url('signup')}}" class="btn btn-success my-2 my-sm-0" id="login" type="submit">Create Account</a>
+
+                  @if(session()->has('name'))
+                  <div class="cir-text">
+                    {{session()->get('name')}}
+                </div>
+                    <img src="{{session()->get('image')}}" alt="" width="50" class="cir">
+                    <a href="{{url('logout')}}" class="btn btn-danger my-2 my-sm-0" id="logout" type="submit">Logout</a>
+                    @else
+                    <div class="guest">
+                        <div class="right-corner">
+                    <p class="cir-text">GuestUser</p>
+                    <a href="{{url('login')}}" class="btn btn-primary my-2 my-sm-0" id="login" type="submit">Login</a>
+                    </div>
+                </div>
+
+                  @endif
                 </form>
               </div>
             </nav>

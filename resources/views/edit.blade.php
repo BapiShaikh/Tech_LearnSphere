@@ -134,14 +134,14 @@
                     </div>
                     </div>
                     <div class="form-group">
-                    <label for="course">Course :</label>
+                    <label for="qualification">Qualification :</label>
                     <div class="form-select">
-                    <select name="course" id="course">
+                    <select name="qualification" id="qualification">
                     <option value="">Choose</option>
-                    <option value="PHP" {{ $editInfo->course == 'PHP' ? 'selected' : '' }}>PHP</option>
-                    <option value="Laravel" {{ $editInfo->course == 'Laravel' ? 'selected' : '' }}>Laravel</option>
-                    <option value="Javascript" {{ $editInfo->course == 'Javascript' ? 'selected' : '' }}>Javascript</option>
-                    <option value="HTML" {{ $editInfo->course == 'HTML' ? 'selected' : '' }}>HTML</option>
+                    <option value="BCA" {{ $editInfo->qualification == 'BCA' ? 'selected' : '' }}>BCA</option>
+                    <option value="MCA" {{ $editInfo->qualification == 'MCA' ? 'selected' : '' }}>MCA</option>
+                    <option value="BTECH" {{ $editInfo->qualification == 'BTECH' ? 'selected' : '' }}>BTECH</option>
+                    <option value="MTECH" {{ $editInfo->qualification == 'MTECH' ? 'selected' : '' }}>MTECH</option>
                     </select>
                     <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
                     </div>

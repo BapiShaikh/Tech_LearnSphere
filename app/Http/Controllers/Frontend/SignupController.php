@@ -26,7 +26,7 @@ class SignupController extends Controller
                 'age'       => 'required|integer|between:18,40',
                 'gender'    => 'required',
                 'city'      => 'required',
-                'course'    => 'required',
+                'qualification'    => 'required',
                 'date'      => 'required|date',
                 'email'     => 'required|email',
                 'address'   => 'required',
@@ -42,7 +42,7 @@ class SignupController extends Controller
         $age=$request->input('age');
         $gender=$request->input('gender');
         $city=$request->input('city');
-        $course=$request->input('course');
+        $qualification=$request->input('qualification');
         $date=$request->input('date');
         $email= $request->input('email');
         $address=$request->input('address');
@@ -64,7 +64,7 @@ class SignupController extends Controller
         'age'=>$age,
         'gender'=>$gender,
         'city'=>$city,
-        'course'=>$course,
+        'qualification'=>$qualification,
         'date'=>$date,
         'email'=>$email,
         'address'=>$address,
@@ -72,12 +72,19 @@ class SignupController extends Controller
         'image'=>$uploadLocation."/".$fileName
     ];
     // $uid  = session($id);
-    $data_table=DB::table('project_data')->insert($data);
+    $data_table=DB::table('project_data')->where('email','=',$email)->get();
+    if(empty($data_table[0])){
+        DB::table('project_data')->insert($data);
+        return redirect("/login");
+
+    }else{
+        return redirect('/signup')->with('message','Email already exist,Please try another email');
+    }
 
     //$data_table2=DB::table('project_data')->get($data);
     //dd($data_table);
     //return view('login')->with(['userInfo'=>$data]);
-    return redirect('/login');
+
 }
 
 
@@ -86,9 +93,10 @@ public function display_data():View
     {
         // $allUser=DB::table('project_data')->get();
         // return view("display")->with(['allInfo'=>$allUser]);  //display.blade.php
-    $uid = session()->get('session_id');
-    $alldata = DB::table('project_data')->where('user_id', '=', $uid)->get();
-    return view('display')->with(['allInfo' => $alldata]);
+    // $id = session()->get('id');
+    $email=session()->get('email');
+    $data = DB::table('project_data')->where('email', '=', $email)->get();
+    return view('display')->with(['allInfo' => $data]);
 
     }
 public function data_edit($ep):View
@@ -110,7 +118,7 @@ public function data_edit($ep):View
                 'age'       => 'required|integer|between:18,40',
                 'gender'    => 'required',
                 'city'      => 'required',
-                'course'    => 'required',
+                'qualification'    => 'required',
                 'date'      => 'required|date',
                 'email'     => 'required|email',
                 'address'   => 'required',
@@ -124,7 +132,7 @@ public function data_edit($ep):View
         $age=$request->input('age');
         $gender=$request->input('gender');
         $city=$request->input('city');
-        $course=$request->input('course');
+        $qualification=$request->input('qualification');
         $date=$request->input('date');
         $email= $request->input('email');
         $address=$request->input('address');
@@ -152,7 +160,7 @@ public function data_edit($ep):View
         'age'=>$age,
         'gender'=>$gender,
         'city'=>$city,
-        'course'=>$course,
+        'qualification'=>$qualification,
         'date'=>$date,
         'email'=>$email,
         'address'=>$address,

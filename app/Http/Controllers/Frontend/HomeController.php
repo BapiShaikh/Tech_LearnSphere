@@ -9,7 +9,16 @@ class HomeController extends Controller
 {
     //
     public function index(){
-        return view('frontend.home');
+        $name=session()->get('name');
+        $image=session()->get('image');
+        if(isset($name)){
+            return view('frontend.home')->with(['name'=>$name,'image'=>$image]);
+
+        }else{
+            return view('frontend.home');
+        }
+
+
     }
     public function article_index(){
         return view('frontend.article');
@@ -17,6 +26,7 @@ class HomeController extends Controller
     public function review_index(){
         return view('review');
     }
+
 
 
 }

@@ -48,22 +48,14 @@
                         <div class="col-xl-6 registration">
                             <div class="card-body p-md-5 text-black">
                                 <h3 class="mb-5 text-uppercase">Student registration form</h3>
-
+                                @if(session('message'))
+                                <script>alert('{{session('message')}}')</script>
+                                @endif
                                 <form method="post" action="{{url('/submit')}}" enctype="multipart/form-data">
                                     @csrf
                                     @if ($errors->has('gender'))
                                         <span class="text-danger mt-2">
                                             {{ $errors->first('gender') }}
-                                        </span>
-                                    @endif
-                                    @if ($errors->has('city'))
-                                        <span class="text-danger mt-2">
-                                            {{ $errors->first('city') }}
-                                        </span>
-                                    @endif
-                                    @if ($errors->has('course'))
-                                        <span class="text-danger mt-2">
-                                            {{ $errors->first('course') }}
                                         </span>
                                     @endif
 
@@ -176,20 +168,20 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="course">Course :</label>
+                                            <label for="qualification">Qualification :</label>
                                             <div class="form-select">
-                                                <select name="course" id="course">
+                                                <select name="qualification" id="qualification">
                                                     <option value="">Choose</option>
-                                                    <option value="PHP">PHP</option>
-                                                    <option value="Laravel">Laravel</option>
-                                                    <option value="Javascript">Javascript</option>
-                                                    <option value="html">HTML</option>
+                                                    <option value="BCA">BCA</option>
+                                                    <option value="MCA">MCA</option>
+                                                    <option value="BTECH">BTECH</option>
+                                                    <option value="MTECH">MTECH</option>
                                                 </select>
                                                 <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
                                             </div>
-                                            @if ($errors->has('course'))
+                                            @if ($errors->has('qualification'))
                                                 <span class="text-danger mt-2">
-                                                    {{ $errors->first('course') }}
+                                                    {{ $errors->first('qualification') }}
                                                 </span>
                                             @endif
                                         </div>

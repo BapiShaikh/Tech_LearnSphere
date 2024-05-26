@@ -27,7 +27,12 @@
             </div>
             <div class="cta-section">
               <div>$129.00</div>
-              <a href="{{ url('/payment') }}" class="btn btn-outline-primary">Buy Now</a>
+              @if(session()->has('name'))
+              <a href="{{ url('/payment') }}" class="btn btn-primary">Buy Now</a>
+
+              @else
+              <a href="{{ url('/login') }}" class="btn btn-primary">Buy Now</a>
+              @endif
             </div>
           </div>
         </div>
@@ -48,7 +53,12 @@
               </div>
               <div class="cta-section">
                 <div class="text-white">$129.00</div>
-                <a href="#" class="btn btn-light">Buy Now</a>
+                @if(session()->has('name'))
+                <a href="{{ url('/payment') }}" class="btn btn-primary">Buy Now</a>
+
+                @else
+                <a href="{{ url('/login') }}" class="btn btn-primary">Buy Now</a>
+                @endif
               </div>
             </div>
           </div>
@@ -65,7 +75,12 @@
             </div>
             <div class="cta-section">
               <div>$129.00</div>
-              <a href="{{ url('/payment') }}" class="btn btn-dark">Buy Now</a>
+              @if(session()->has('name'))
+                <a href="{{ url('/payment') }}" class="btn btn-primary">Buy Now</a>
+
+                @else
+                <a href="{{ url('/login') }}" class="btn btn-primary">Buy Now</a>
+                @endif
             </div>
           </div>
         </div>
@@ -82,7 +97,12 @@
             </div>
             <div class="cta-section">
               <div class="text-white">$129.00</div>
-              <a href="{{ url('/payment') }}" class="btn btn-light">Buy Now</a>
+              @if(session()->has('name'))
+                <a href="{{ url('/payment') }}" class="btn btn-primary">Buy Now</a>
+
+                @else
+                <a href="{{ url('/login') }}" class="btn btn-primary">Buy Now</a>
+                @endif
             </div>
           </div>
         </div>
@@ -95,17 +115,17 @@
               <p class="card-text">"Dive into modern web development with our Laravel course. Explore the elegant PHP framework that streamlines the creation of robust, scalable web applications. Learn the ins and outs of Laravel, from its powerful routing and templating system to its built-in authentication and security features. Through hands-on projects and expert guidance, master the art of building high-quality web applications efficiently.
                 <details>
                     <summary class="summary">Read More..</summary>
-                    Whether you're a beginner or an experienced developer, this Laravel course is your gateway to building professional-grade web applications with ease."</p></details>
+                    Whether you're a beginner or an experienced developer', this Laravel course is your gateway to building professional-grade web applications with ease."</p></details>
             </div>
             <div class="cta-section">
               <div class="text-white">$129.00</div>
 
-              @if (Auth::check() && Auth::user()->userProfile)
+                @if(session()->has('name'))
                 <a href="{{ url('/payment') }}" class="btn btn-primary">Buy Now</a>
-              @else
-                <a href="{{ url('/payment') }}" class="btn btn-primary">Buy Now</a>
-              @endif
 
+                @else
+                <a href="{{ url('/login') }}" class="btn btn-primary">Buy Now</a>
+                @endif
             </div>
           </div>
         </div>
@@ -122,7 +142,12 @@
             </div>
             <div class="cta-section">
               <div class="text-white">$129.00</div>
-              <a href="#" class="btn btn-light">Buy Now</a>
+              @if(session()->has('name'))
+                <a href="{{ url('/payment') }}" class="btn btn-primary">Buy Now</a>
+
+                @else
+                <a href="{{ url('/login') }}" class="btn btn-primary">Buy Now</a>
+                @endif
             </div>
           </div>
         </div>
@@ -139,7 +164,12 @@
             </div>
             <div class="cta-section">
               <div class="text-white">$129.00</div>
-              <a href="#" class="btn btn-light">Buy Now</a>
+              @if(session()->has('name'))
+                <a href="{{ url('/payment') }}" class="btn btn-primary">Buy Now</a>
+
+                @else
+                <a href="{{ url('/login') }}" class="btn btn-primary">Buy Now</a>
+                @endif
             </div>
           </div>
         </div>
@@ -156,7 +186,7 @@
             </div>
             <div class="cta-section">
               <div class="text-white">$129.00</div>
-              <a href="{{ url('/payment') }}" class="btn btn-light">Buy Now</a>
+              <a href="#" class="btn btn-light">Buy Now</a>
             </div>
           </div>
         </div>

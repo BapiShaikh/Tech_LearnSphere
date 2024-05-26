@@ -11,7 +11,14 @@ class ContactController extends Controller
 {
     //
     public function index(){
-        return view('frontend.contact');
+        $name=session()->get('name');
+        $image=session()->get('image');
+        if(isset($name)){
+            return view('frontend.contact')->with(['name'=>$name,'image'=>$image]);
+
+        }else{
+            return view('frontend.contact');
+        }
     }
     public function contact_data(Request $request){
         //dd($request->all());
