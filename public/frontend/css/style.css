@@ -16,31 +16,31 @@ body{
     color: grey;
 }
 .icon-logo {
-  width: 80px; /* Set the width and height to the same value for a perfect circle */
+  width: 80px;
   height: 80px;
-  border-radius: 50%; /* Make the container circular */
-  overflow: hidden; /* Ensure the image stays within the circular container */
+  border-radius: 50%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff; /* Optional: set background color */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for depth */
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
 }
 
 .icon-logo img {
-  width: 100%; /* Make the image fill the circular container */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto;
   margin-left: 7px;
 }
 
 
 .bgimage {
   position: relative;
-  /* Set width and height of the div */
-  width: 100%; /* Adjust this value as needed */
-  height: 100vh; /* Adjust this value as needed */
-  /* Hide overflow to prevent scrollbars */
+
+  width: 100%;
+  height: 100vh;
+
   overflow: hidden;
   display:flex;
 }
@@ -52,17 +52,17 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  /* Set background image */
-  background-image: url('../images/home-background.jpg');
+
+  background-image: url('../images/home-background.png');
   border-radius: 12px;
 
 
-  /* Optional: Center the background image */
+
   background-position: center;
-  /* Optional: Scale the background image to cover the entire div */
+
   background-size: cover;
-  /* Set transparency */
-  opacity: 1;/* Adjust the value (between 0 and 1) for desired transparency */
+
+  opacity: 1;
 }
 .mapping{
   display: flex;
@@ -83,10 +83,10 @@ body{
 }
 @keyframes slideFromBottom {
   from {
-      transform: translateY(-100%); /* Start off-screen to the left */
+      transform: translateY(-100%);
   }
   to {
-      transform: translateY(100%); /* End at the original position */
+      transform: translateY(100%);
   }
 }
 .map-icon-text{
@@ -99,17 +99,17 @@ body{
 }
 @media screen and (max-width: 768px) {
     .map-icon {
-      margin-top: 5%; /* Adjust margin for smaller screens */
-      margin-left: 25%; /* Adjust margin for smaller screens */
-      max-width: 90%; /* Adjust maximum width for smaller screens */
+      margin-top: 5%;
+      margin-left: 25%;
+      max-width: 90%;
     }
   }
   .map-container {
     position: relative;
     width: 50%;
-    padding-bottom: 56.25%; /* Aspect ratio 16:9 (height/width) */
+    padding-bottom: 56.25%;
   }
-  /* Example media query for smaller screens */
+
 @media (max-width: 768px) {
     .container_1 {
         padding: 15px;
@@ -144,17 +144,17 @@ body{
     height: 100%;
   }
 .image-map{
-    margin-top: 10%; /* Adjust margin using percentage for responsiveness */
-    margin-left: 10%; /* Adjust margin using percentage for responsiveness */
-    max-width: 80%; /* Set maximum width to maintain responsiveness */
-    height:50vh; /* Allow height to adjust according to the content */
-    width: auto; /* Allow width to adjust according to the content */
+    margin-top: 10%;
+    margin-left: 10%;
+    max-width: 80%;
+    height:50vh;
+    width: auto;
 }
 @media screen and (max-width: 768px) {
     .image-map {
-      margin-top: 5%; /* Adjust margin for smaller screens */
-      margin-left: 5%; /* Adjust margin for smaller screens */
-      max-width: 90%; /* Adjust maximum width for smaller screens */
+      margin-top: 5%;
+      margin-left: 5%;
+      max-width: 90%;
     }
   }
 
@@ -198,10 +198,10 @@ body{
 
   @keyframes fadeInOut {
     0% {
-      opacity: 0; /* Fully transparent */
+      opacity: 0;
     }
     100% {
-      opacity: 1; /* Fully opaque */
+      opacity: 1;
     }
   }
   .dropdown:hover > .dropdown-menu {
@@ -211,7 +211,7 @@ body{
     position: relative;
   }
   .dropdown-submenu > a::after {
-    content: "\25B6"; /* Right arrow */
+    content: "\25B6";
     float: right;
     margin-left: .5rem;
   }
@@ -283,8 +283,8 @@ body{
 
 /* Navbar Brand */
 .navbar {
-  background-color: transparent !important; /* Make the background transparent */
-  border-color: transparent !important; /* Make the border transparent */
+  background-color: transparent !important;
+  border-color: transparent !important;
 }
 .navbar-brand {
   font-size: 24px;
@@ -303,17 +303,17 @@ body{
 /* Navbar Links */
 .navbar-nav .nav-link {
   font-size: 18px;
-  color: #333; /* Change link color */
+  color: #333;
 }
 
 .navbar-nav .nav-link:hover {
   color: #1398f1;
-   /* Change link color on hover */
+
 }
 
 /* Active Link */
 .navbar-nav .nav-item.active .nav-link {
-  color: #0040ff; /* Change active link color */
+  color: #0040ff;
 }
 
 /* Dropdown Menu */
@@ -324,23 +324,23 @@ body{
 
 .dropdown-item {
   font-size: 16px;
-  color: #333; /* Change dropdown item color */
+  color: #333;
 }
 
 .dropdown-item:hover {
-  background-color: #f8f9fa; /* Change dropdown item background color on hover */
-  color: #007bff; /* Change dropdown item color on hover */
+  background-color: #f8f9fa;
+  color: #007bff;
 }
 
 .dropdown-divider {
-  background-color: #ccc; /* Change dropdown divider color */
+  background-color: #ccc;
 }
 /* slider */
 .slider {
   width: 100%;
   overflow: hidden;
-  max-width: 100%; /* Set a maximum width for the slider */
-  margin: 0 auto; /* Center the slider horizontally */
+  max-width: 100%;
+  margin: 0 auto;
 
 }
 
@@ -349,7 +349,7 @@ body{
 }
 
 .slides img {
-  height: 200px; /* Set the height you want */
+  height: 200px;
   width: auto;
   margin-right: 40px;
 
@@ -430,45 +430,6 @@ body{
 .footer_outer_div{
   max-width: 100%;
 }
-
-
-/* sidebar */
-
-/* custom css main div */
-
-/* .main-div{
-  display:flex;
-  margin: 30px;
-
-  animation: slideFromLeft 1s ease-in-out;
-
-
-}
-.main1{
-  margin: 20px;
-  margin-right:70px;
-  height: 39vh;
-  width: 30vw;
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-  box-shadow: 5px 10px 8px #888888;
-
-}
-.main2{
-  margin: 20px;
-  margin-right:70px;
-  height: 42vh;
-  width: 30vw;
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-  box-shadow: 5px 10px 8px #888888;
-}
-.main3{
-  margin: 20px;
-  margin-right:70px;
-  height: 39vh;
-  width: 30vw;
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-  box-shadow: 5px 10px 8px #888888;
-} */
 .main-div {
     display: flex;
     flex-wrap: wrap;
@@ -516,12 +477,12 @@ body{
 }
 @keyframes fadeIn {
   from {
-      opacity: 0; /* Start with opacity 0 */
-      transform: translateY(-30px); /* Start with 20px translation up */
+      opacity: 0;
+      transform: translateY(-30px);
   }
   to {
-      opacity: 1; /* End with opacity 1 */
-      transform: translateY(5px); /* End with no translation */
+      opacity: 1;
+      transform: translateY(5px);
   }
 }
 .para1:hover{
@@ -546,10 +507,10 @@ body{
 }
 @keyframes slideFromLeft {
   from {
-      transform: translateX(-100%); /* Start off-screen to the left */
+      transform: translateX(-100%); 
   }
   to {
-      transform: translateX(0); /* End at the original position */
+      transform: translateX(0);
   }
 }
 .t1:hover{
@@ -561,5 +522,3 @@ body{
 .tech-trends{
     border-radius: 50%;
 }
-
-

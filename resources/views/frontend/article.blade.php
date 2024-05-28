@@ -32,9 +32,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{url('contact')}}">Contact Us</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{url('comment')}}">Comments</a>
-                </li>
+                
             </ul>
         </div>
     </nav>
@@ -90,10 +88,14 @@
             <h2>Comments</h2>
             <form method="post" action="{{url('/commentsubmit')}}">
                 @csrf
+
+
+
             <div class="form-group">
                 <label for="comment">Leave a comment:</label>
                 <textarea class="form-control" id="comment" rows="3" name="comment"></textarea>
             </div>
+
             <div class="form-group">
                 <button class="btn btn-primary mt-2" type="submit" name="submit">Submit</button>
             </div>

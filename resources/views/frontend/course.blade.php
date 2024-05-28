@@ -26,7 +26,7 @@
                     Learn the fundamentals of PHP programming, from variables and control structures to functions and databases. Through practical examples and hands-on exercises, master the art of building dynamic websites and web applications. Whether you're a beginner or seasoned developer, this PHP course equips you with essential skills for web development success."</p></details>
             </div>
             <div class="cta-section">
-              <div>$129.00</div>
+              <div class="text-white">&#8377;3000</div>
               @if(session()->has('name'))
               <a href="{{ url('/payment') }}" class="btn btn-primary">Buy Now</a>
 
@@ -52,7 +52,7 @@
                 </span>
               </div>
               <div class="cta-section">
-                <div class="text-white">$129.00</div>
+                <div class="text-white">&#8377;2000</div>
                 @if(session()->has('name'))
                 <a href="{{ url('/payment') }}" class="btn btn-primary">Buy Now</a>
 
@@ -74,7 +74,7 @@
                     Through practical exercises and real-world examples, master the art of styling websites to perfection. Whether you're a novice or seasoned developer, this CSS course equips you with essential skills to create visually stunning and responsive web designs."</details></p>
             </div>
             <div class="cta-section">
-              <div>$129.00</div>
+              <div class="text-white">&#8377;4000</div>
               @if(session()->has('name'))
                 <a href="{{ url('/payment') }}" class="btn btn-primary">Buy Now</a>
 
@@ -96,7 +96,7 @@
                     Delve into the realm of client-side scripting and unleash the potential to create dynamic and interactive web applications. Learn the core concepts of JavaScript programming, from variables and functions to DOM manipulation and event handling. Through hands-on projects and real-world examples, develop the skills needed to breathe life into your web pages. Whether you're a beginner or an experienced coder, this JavaScript course empowers you to build engaging and responsive web experiences."</p></details>
             </div>
             <div class="cta-section">
-              <div class="text-white">$129.00</div>
+              <div class="text-white">&#8377;5000</div>
               @if(session()->has('name'))
                 <a href="{{ url('/payment') }}" class="btn btn-primary">Buy Now</a>
 
@@ -118,7 +118,7 @@
                     Whether you're a beginner or an experienced developer', this Laravel course is your gateway to building professional-grade web applications with ease."</p></details>
             </div>
             <div class="cta-section">
-              <div class="text-white">$129.00</div>
+              <div class="text-white">&#8377;6000</div>
 
                 @if(session()->has('name'))
                 <a href="{{ url('/payment') }}" class="btn btn-primary">Buy Now</a>
@@ -141,7 +141,7 @@
                     The course includes practical projects and exercises to reinforce concepts. It is suitable for beginners and those with some JavaScript experience, aiming to provide a solid foundation in React development.</p></details>
             </div>
             <div class="cta-section">
-              <div class="text-white">$129.00</div>
+              <div class="text-white">&#8377;7000</div>
               @if(session()->has('name'))
                 <a href="{{ url('/payment') }}" class="btn btn-primary">Buy Now</a>
 
@@ -163,7 +163,7 @@
                     Through hands-on projects and practical exercises, learners will gain proficiency in creating and managing Angular applications. Suitable for beginners and those with some JavaScript experience, the course aims to equip participants with the skills needed for modern web development using Angular.</p></details>
             </div>
             <div class="cta-section">
-              <div class="text-white">$129.00</div>
+              <div class="text-white">&#8377;4000</div>
               @if(session()->has('name'))
                 <a href="{{ url('/payment') }}" class="btn btn-primary">Buy Now</a>
 
@@ -185,8 +185,13 @@
                     The course includes practical projects to reinforce learning. Designed for beginners and those with programming experience, it aims to equip learners with the skills needed for professional .NET development.</p></details>
             </div>
             <div class="cta-section">
-              <div class="text-white">$129.00</div>
-              <a href="#" class="btn btn-light">Buy Now</a>
+              <div class="text-white">&#8377;6000</div>
+              @if(session()->has('name'))
+              <a href="{{ url('/payment') }}" class="btn btn-primary">Buy Now</a>
+
+              @else
+              <a href="{{ url('/login') }}" class="btn btn-primary">Buy Now</a>
+              @endif
             </div>
           </div>
         </div>

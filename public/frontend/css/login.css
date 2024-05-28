@@ -226,7 +226,7 @@ body .password-field input {
   width: 21rem;
   height: 4em;
   padding: 1px;
-  border: 1px solid; /* Added missing border-width */
+  border: 1px solid;
   border-color: #000;
   font-size: 1rem;
   letter-spacing: 1px;
@@ -234,29 +234,23 @@ body .password-field input {
 
 body .password-field input::placeholder {
   color: #000;
-  font-weight: bold; /* Corrected property name */
+  font-weight: bold;
 }
 
 body .password-field #toggler {
   position: absolute;
-  right: 10px; /* Adjusted right positioning for better alignment */
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
- 
+
 }
 .go-home{
   font-weight: 600;
   color: #fff;
   text-decoration: none;
   margin-left: 70%;
-
-
 }
-
-
-
-
  @media screen and (max-width: 767px){
     ._form_05{
       height: auto;

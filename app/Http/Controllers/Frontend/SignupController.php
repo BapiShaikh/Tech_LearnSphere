@@ -71,7 +71,7 @@ class SignupController extends Controller
         'password'=>$password,
         'image'=>$uploadLocation."/".$fileName
     ];
-    // $uid  = session($id);
+  
     $data_table=DB::table('project_data')->where('email','=',$email)->get();
     if(empty($data_table[0])){
         DB::table('project_data')->insert($data);

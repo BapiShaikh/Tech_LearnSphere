@@ -40,6 +40,7 @@
         position: sticky;
         top: 0;
         z-index: 1020; /* Ensure it stays on top of other elements */
+        background-color: white;
 
       }
 
@@ -81,7 +82,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdownResources">
               <a class="dropdown-item" href="{{url('course')}}">Course</a>
               <a class="dropdown-item" href="{{url('article')}}">Article</a>
-              <a class="dropdown-item" href="{{url('career')}}">Career</a>
+              <a class="dropdown-item" href="{{url('signup')}}">SignUp</a>
               <div class="dropdown-divider"></div>
               <div class="dropdown-submenu">
                 <a class="dropdown-item " href="#" id="navbarDropdownFeatures" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -111,7 +112,7 @@
     <div class="cir-text">
       {{session()->get('name')}}
   </div>
-      <img src="{{session()->get('image')}}" alt="" width="50" class="cir">
+      <img src="{{session()->get('image')}}" alt="" height="50" width="50" class="cir">
       <a href="{{url('logout')}}" class="btn btn-danger my-2 my-sm-0" id="logout" type="submit">Logout</a>
       @else
       <div class="guest">
@@ -192,91 +193,130 @@
 </div>
 
 
-             <!-- Team Start -->
-             <div class="container-xxl py-5">
-              <div class="container">
-                  <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                      <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
-                      <h1 class="mb-5">Expert Instructors</h1>
+<!-- Team Start -->
+<div class="container-fluid py-2">
+  <div class="container">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
+          <h1 class="mb-5">Expert Instructors</h1>
+      </div>
+      <div class="row g-2">
+          <div class="col-lg-2 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="team-item bg-light">
+                  <div class="overflow-hidden">
+                      <img class="img-fluid" src="{{url('frontend/images/bapi_image.jpeg')}}" alt="" height="50">
                   </div>
-                  <div class="row g-4">
-                      <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                          <div class="team-item bg-light">
-                              <div class="overflow-hidden">
-                                  <img class="img-fluid" src="{{url('frontend/images/bapi_image.jpeg')}}" alt="">
-                              </div>
-                              <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                                  <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                    <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
-                                    <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                    <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
-                                  </div>
-                              </div>
-                              <div class="text-center p-4">
-                                  <h5 class="mb-0">Bapi Shaikh</h5>
-                                  <small>Developer</small>
-                              </div>
-                          </div>
+                  <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                      <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                          <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                          <a class="btn btn-sm-square btn-primary mx-1" href="http://www.linkedin.com/in/bapi-shaikh-023a221b7" target="_blank"><i class="bi bi-linkedin"></i></a>
+                          <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank" style="background: linear-gradient(45deg, #FFD600, #FF6C00, #DD2A7B, #8134AF, #515BD4); color: white;"><i class="bi bi-instagram"></i></a>
                       </div>
-                      <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                          <div class="team-item bg-light">
-                              <div class="overflow-hidden">
-                                  <img class="img-fluid" src="{{url('frontend/images/dummy-image.jpg')}}" alt="">
-                              </div>
-                              <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                                  <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                    <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
-                              <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                              <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
-                                  </div>
-                              </div>
-                              <div class="text-center p-4">
-                                  <h5 class="mb-0">Instructor Name</h5>
-                                  <small>Designation</small>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                          <div class="team-item bg-light">
-                              <div class="overflow-hidden">
-                                  <img class="img-fluid" src="{{url('frontend/images/souparna1.jpg')}}" alt="">
-                              </div>
-                              <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                                  <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                      <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
-                                      <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                      <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
-                                  </div>
-                              </div>
-                              <div class="text-center p-4">
-                                  <h5 class="mb-0">Souparna Biswas</h5>
-                                  <small>Designer</small>
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                          <div class="team-item bg-light">
-                              <div class="overflow-hidden">
-                                  <img class="img-fluid" src="{{url('frontend/images/dummy-image.jpg')}}" alt="">
-                              </div>
-                              <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                                  <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                    <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
-                                    <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                    <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
-                                  </div>
-                              </div>
-                              <div class="text-center p-4">
-                                  <h5 class="mb-0">Instructor Name</h5>
-                                  <small>Designation</small>
-                              </div>
-                          </div>
-                      </div>
+                  </div>
+                  <div class="text-center p-4">
+                      <h5 class="mb-0">Bapi Shaikh</h5>
+                      <small>Developer</small>
                   </div>
               </div>
           </div>
-          <!-- Team End -->
+          <div class="col-lg-2 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="team-item bg-light">
+                  <div class="overflow-hidden">
+                      <img class="img-fluid" src="{{url('frontend/images/Souparna.jpg')}}" alt="" height="50">
+                  </div>
+                  <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                      <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                          <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                          <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                          <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank" style="background: linear-gradient(45deg, #FFD600, #FF6C00, #DD2A7B, #8134AF, #515BD4); color: white;"><i class="bi bi-instagram"></i></a>
+                      </div>
+                  </div>
+                  <div class="text-center p-4">
+                      <h5 class="mb-0">Souparna</h5>
+                      <small>Developer</small>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="team-item bg-light">
+                  <div class="overflow-hidden">
+                      <img class="img-fluid" src="{{url('frontend/images/sumon.jpg')}}" alt="" height="50">
+                  </div>
+                  <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                      <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                          <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                          <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                          <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank" style="background: linear-gradient(45deg, #FFD600, #FF6C00, #DD2A7B, #8134AF, #515BD4); color: white;"><i class="bi bi-instagram"></i></a>
+                      </div>
+                  </div>
+                  <div class="text-center p-4">
+                      <h5 class="mb-0">Sumon</h5>
+                      <small>Designer</small>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-4 wow fadeInUp" data-wow-delay="0.7s">
+              <div class="team-item bg-light">
+                  <div class="overflow-hidden">
+                      <img class="img-fluid" src="{{url('frontend/images/moumita.png')}}" alt="" height="50">
+                  </div>
+                  <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                      <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                          <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                          <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                          <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank" style="background: linear-gradient(45deg, #FFD600, #FF6C00, #DD2A7B, #8134AF, #515BD4); color: white;"><i class="bi bi-instagram"></i></a>
+                      </div>
+                  </div>
+                  <div class="text-center p-4">
+                      <h5 class="mb-0">Moumita</h5>
+                      <small>Designer</small>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-4 wow fadeInUp" data-wow-delay="0.9s">
+              <div class="team-item bg-light">
+                  <div class="overflow-hidden">
+                      <img class="img-fluid" src="{{url('frontend/images/sayanti.png')}}" alt="" height="50">
+                  </div>
+                  <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                      <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                          <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                          <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                          <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank" style="background: linear-gradient(45deg, #FFD600, #FF6C00, #DD2A7B, #8134AF, #515BD4); color: white;"><i class="bi bi-instagram"></i></a>
+                      </div>
+                  </div>
+                  <div class="text-center p-4">
+                      <h5 class="mb-0">Sayanti</h5>
+                      <small>Designer</small>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-4 wow fadeInUp" data-wow-delay="1.1s">
+              <div class="team-item bg-light">
+                  <div class="overflow-hidden">
+                      <img class="img-fluid" src="{{url('frontend/images/sabanti.png')}}" alt="" height="50">
+                  </div>
+                  <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                      <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                          <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                          <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                          <a class="btn btn-sm-square mx-1" href="https://www.instagram.com/" target="_blank" style="background: linear-gradient(45deg, #FFD600, #FF6C00, #DD2A7B, #8134AF, #515BD4); color: white;">
+                            <i class="bi bi-instagram"></i>
+                          </a>
+
+                      </div>
+                  </div>
+                  <div class="text-center p-4">
+                      <h5 class="mb-0">Srabanti</h5>
+                      <small>Designer</small>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+</div>
+<!-- Team End -->
 
 
 
@@ -286,85 +326,85 @@
 
     <!-- Footer -->
     <footer class="text-center text-lg-start text-white" style="background-color: #b8acac">
-      <div class="container p-4">
-        <section class="">
-          <div class="row">
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Tech_LearnSphere</h6>
-              <p>
-                "Empowering Minds" suggests that the academy aims to equip students with the knowledge, skills, and confidence to navigate the complexities of the world.</p>
-            </div>
+        <div class="container p-4">
+          <section class="">
+            <div class="row">
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Tech_LearnSphere</h6>
+                <p>
+                  "Empowering Minds" suggests that the academy aims to equip students with the knowledge, skills, and confidence to navigate the complexities of the world.</p>
+              </div>
 
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-              <p>
-                <a href="{{url('course')}}" class="text-white">HTML</a>
-              </p>
-              <p>
-                <a href="{{url('course')}}" class="text-white">CSS</a>
-              </p>
-              <p>
-                <a href="{{url('course')}}" class="text-white">JavsScript</a>
-              </p>
-              <p>
-                <a href="{{url('course')}}" class="text-white">PHP</a>
-              </p>
-            </div>
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                <p>
+                  <a href="{{url('course')}}" class="text-white">HTML</a>
+                </p>
+                <p>
+                  <a href="{{url('course')}}" class="text-white">CSS</a>
+                </p>
+                <p>
+                  <a href="{{url('course')}}" class="text-white">JavsScript</a>
+                </p>
+                <p>
+                  <a href="{{url('course')}}" class="text-white">PHP</a>
+                </p>
+              </div>
 
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Useful Links</h6>
-              <p>
-                <a href="{{url('contact')}}" class="text-white">Contact Us</a>
-              </p>
-              <p>
-                <a href="{{url('about')}}" class="text-white">About</a>
-              </p>
-              <p>
-                <a href="{{url('article')}}" class="text-white">Article</a>
-              </p>
-              <p>
-                <a href="{{url('guide')}}" class="text-white">Features</a>
-              </p>
-            </div>
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Useful Links</h6>
+                <p>
+                  <a href="{{url('contact')}}" class="text-white">Contact Us</a>
+                </p>
+                <p>
+                  <a href="{{url('about')}}" class="text-white">About</a>
+                </p>
+                <p>
+                  <a href="{{url('article')}}" class="text-white">Article</a>
+                </p>
+                <p>
+                  <a href="{{url('guide')}}" class="text-white">Features</a>
+                </p>
+              </div>
 
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-              <p><i class="bi bi-house-door mr-3"></i> Kolkata, 700091, West Bengal</p>
-              <p><i class="bi bi-envelope mr-3"></i> abc@gmail.com</p>
-              <p><i class="bi bi-phone mr-3"></i> +91 9330550637</p>
-              <p><i class="bi bi-phone mr-3"></i> +91 7586943171</p>
-            </div>
-          </div>
-        </section>
-
-        <hr class="my-3">
-
-        <section class="p-3">
-          <div class="row d-flex align-items-center">
-            <div class="col-md-7 col-lg-8 text-center text-md-start">
-              <div class="p-3">
-
-                <p class="text-white">© 2024 Copyright: Tech_LearnSphere</p>
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                <p><i class="bi bi-house-door mr-3"></i> Kolkata, 700091, West Bengal</p>
+                <p><i class="bi bi-envelope mr-3"></i> abc@gmail.com</p>
+                <p><i class="bi bi-phone mr-3"></i> +91 9330550637</p>
+                <p><i class="bi bi-phone mr-3"></i> +91 7586943171</p>
               </div>
             </div>
-            <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-              <a href="https://www.facebook.com/" target='_blank' class="btn btn-outline-primary btn-floating m-1" role="button">
-                <i class="bi bi-facebook"></i>
-              </a>
-              <a href="http://www.linkedin.com/in/bapi-shaikh-023a221b7" target='_blank' class="btn btn-outline-info btn-floating m-1" role="button">
-                  <i class="bi bi-linkedin"></i>
-              </a>
-              <a href="https://www.google.com/" target='_blank' class="btn btn-outline-danger btn-floating m-1" role="button">
-                <i class="bi bi-google"></i>
-              </a>
-              <a href="https://www.instagram.com/" target='_blank' class="btn btn-outline-success btn-floating m-1" role="button">
-                <i class="bi bi-instagram"></i>
-              </a>
+          </section>
+
+          <hr class="my-3">
+
+          <section class="p-3">
+            <div class="row d-flex align-items-center">
+              <div class="col-md-7 col-lg-8 text-center text-md-start">
+                <div class="p-3">
+
+                  <p class="text-white">© 2024 Copyright: Tech_LearnSphere</p>
+                </div>
+              </div>
+              <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                <a href="https://www.facebook.com/" target='_blank' class="btn btn-outline-primary btn-floating m-1"  style="background-color: #1877F2; color: white;" role="button">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="http://www.linkedin.com/in/bapi-shaikh-023a221b7" target='_blank' class="btn btn-outline-info btn-floating m-1"  style="background-color: #0077B5; color: white;" role="button">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://www.google.com/" target='_blank' class="btn btn-outline-danger btn-floating m-1" style="background: linear-gradient(45deg, #4285F4, #EA4335, #FBBC05, #34A853); color: white;" role="button">
+                  <i class="bi bi-google"></i>
+                </a>
+                <a href="https://www.instagram.com/" target='_blank' class="btn btn-outline-success btn-floating m-1" style="background: linear-gradient(45deg, #FFD600, #FF6C00, #DD2A7B, #8134AF, #515BD4); color: white;"role="button">
+                  <i class="bi bi-instagram"></i>
+                </a>
+              </div>
             </div>
-          </div>
-        </section>
-      </div>
-    </footer>
+          </section>
+        </div>
+      </footer>
 
 
   </div>

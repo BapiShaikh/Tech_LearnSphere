@@ -228,87 +228,85 @@
 
         <!-- Footer -->
         <footer class="text-center text-lg-start text-white" style="background-color: #b8acac">
-          <div class="container p-4">
-            <section class="">
-              <div class="row">
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
-                  <h6 class="text-uppercase mb-4 font-weight-bold">Tech_LearnSphere</h6>
-                  <p>
-                    "Empowering Minds" suggests that the academy aims to equip students with the knowledge, skills, and confidence to navigate the complexities of the world.</p>
-                </div>
+            <div class="container p-4">
+              <section class="">
+                <div class="row">
+                  <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Tech_LearnSphere</h6>
+                    <p>
+                      "Empowering Minds" suggests that the academy aims to equip students with the knowledge, skills, and confidence to navigate the complexities of the world.</p>
+                  </div>
 
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                  <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-                  <p>
-                    <a href="{{url('course')}}" class="text-white">HTML</a>
-                  </p>
-                  <p>
-                    <a href="{{url('course')}}" class="text-white">CSS</a>
-                  </p>
-                  <p>
-                    <a href="{{url('course')}}" class="text-white">JavsScript</a>
-                  </p>
-                  <p>
-                    <a href="{{url('course')}}" class="text-white">PHP</a>
-                  </p>
-                </div>
+                  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                    <p>
+                      <a href="{{url('course')}}" class="text-white">HTML</a>
+                    </p>
+                    <p>
+                      <a href="{{url('course')}}" class="text-white">CSS</a>
+                    </p>
+                    <p>
+                      <a href="{{url('course')}}" class="text-white">JavsScript</a>
+                    </p>
+                    <p>
+                      <a href="{{url('course')}}" class="text-white">PHP</a>
+                    </p>
+                  </div>
 
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                  <h6 class="text-uppercase mb-4 font-weight-bold">Useful Links</h6>
-                  <p>
-                    <a href="{{url('contact')}}" class="text-white">Contact Us</a>
-                  </p>
-                  <p>
-                    <a href="{{url('about')}}" class="text-white">About</a>
-                  </p>
-                  <p>
-                    <a href="{{url('article')}}" class="text-white">Article</a>
-                  </p>
-                  <p>
-                    <a href="{{url('guide')}}" class="text-white">Features</a>
-                  </p>
-                </div>
+                  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Useful Links</h6>
+                    <p>
+                      <a href="{{url('contact')}}" class="text-white">Contact Us</a>
+                    </p>
+                    <p>
+                      <a href="{{url('about')}}" class="text-white">About</a>
+                    </p>
+                    <p>
+                      <a href="{{url('article')}}" class="text-white">Article</a>
+                    </p>
+                    <p>
+                      <a href="{{url('guide')}}" class="text-white">Features</a>
+                    </p>
+                  </div>
 
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                  <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                  <p><i class="bi bi-house-door mr-3"></i> Kolkata, 700091, West Bengal</p>
-                  <p><i class="bi bi-envelope mr-3"></i> abc@gmail.com</p>
-                  <p><i class="bi bi-phone mr-3"></i> +91 9330550637</p>
-                  <p><i class="bi bi-phone mr-3"></i> +91 7586943171</p>
-                </div>
-              </div>
-            </section>
-
-            <hr class="my-3">
-
-            <section class="p-3">
-              <div class="row d-flex align-items-center">
-                <div class="col-md-7 col-lg-8 text-center text-md-start">
-                  <div class="p-3">
-
-                    <p class="text-white">© 2024 Copyright: Tech_LearnSphere</p>
+                  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                    <p><i class="bi bi-house-door mr-3"></i> Kolkata, 700091, West Bengal</p>
+                    <p><i class="bi bi-envelope mr-3"></i> abc@gmail.com</p>
+                    <p><i class="bi bi-phone mr-3"></i> +91 9330550637</p>
+                    <p><i class="bi bi-phone mr-3"></i> +91 7586943171</p>
                   </div>
                 </div>
-                <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-                  <a href="https://www.facebook.com/" target='_blank' class="btn btn-outline-primary btn-floating m-1" role="button">
-                    <i class="bi bi-facebook"></i>
-                  </a>
-                  <a href="http://www.linkedin.com/in/bapi-shaikh-023a221b7" target='_blank' class="btn btn-outline-info btn-floating m-1" role="button">
-                      <i class="bi bi-linkedin"></i>
-                  </a>
-                  <a href="https://www.google.com/" target='_blank' class="btn btn-outline-danger btn-floating m-1" role="button">
-                    <i class="bi bi-google"></i>
-                  </a>
-                  <a href="https://www.instagram.com/" target='_blank' class="btn btn-outline-success btn-floating m-1" role="button">
-                    <i class="bi bi-instagram"></i>
-                  </a>
+              </section>
+
+              <hr class="my-3">
+
+              <section class="p-3">
+                <div class="row d-flex align-items-center">
+                  <div class="col-md-7 col-lg-8 text-center text-md-start">
+                    <div class="p-3">
+
+                      <p class="text-white">© 2024 Copyright: Tech_LearnSphere</p>
+                    </div>
+                  </div>
+                  <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                    <a href="https://www.facebook.com/" target='_blank' class="btn btn-outline-primary btn-floating m-1"  style="background-color: #1877F2; color: white;" role="button">
+                      <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="http://www.linkedin.com/in/bapi-shaikh-023a221b7" target='_blank' class="btn btn-outline-info btn-floating m-1"  style="background-color: #0077B5; color: white;" role="button">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://www.google.com/" target='_blank' class="btn btn-outline-danger btn-floating m-1" style="background: linear-gradient(45deg, #4285F4, #EA4335, #FBBC05, #34A853); color: white;" role="button">
+                      <i class="bi bi-google"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target='_blank' class="btn btn-outline-success btn-floating m-1" style="background: linear-gradient(45deg, #FFD600, #FF6C00, #DD2A7B, #8134AF, #515BD4); color: white;"role="button">
+                      <i class="bi bi-instagram"></i>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </section>
-          </div>
-        </footer>
-
-
+              </section>
+            </div>
+          </footer>
         <!-- Footer -->
       </div>
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

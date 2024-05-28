@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
     <style>
         .payment{
             width: 400px;
@@ -23,12 +24,52 @@
         .mx-auto{
             margin-top: 160px
         }
+        .logo {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #fff;
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        /* CSS to make the image fit inside the circle */
+        .logo img {
+            width: 100%;
+            height: auto;
+        }
+        .payment-head{
+            margin-top: 130px;
+            text-align: center;
+        }
+        body{
+            background-color: rgb(206, 206, 206);
+        }
+        #pay-button{
+            width:150px;
+            height:50px;
+            border-radius: 5px;
+            background-color:rgb(136, 243, 112);
+            font-size: 25px;
+
+        }
+        #pay-button:hover{
+            background-color:rgb(80, 250, 50);
+
+        }
     </style>
 </head>
 <body>
-
+    <header>
+        <a href="{{url('home')}}"><img src="{{url('frontend/images/image.jpg')}}" alt="Your Logo" class="logo"></a>
+    </header>
+    <div class="payment-head">
     <h1>Make a Payment</h1>
-    <button id="pay-button">Pay Now</button>
+    <button  id="pay-button">Pay Now</button>
+</div>
 
 
 

@@ -11,17 +11,16 @@
 </head>
 <body>
     <!-- Chatbot Button -->
-    <button type="button" class="btn btn-primary btn-1" data-toggle="modal" data-target="#chatbotModal" style="position: fixed; bottom: 20px; right: 20px;">
-        <img src="{{url('frontend/images/Google_Messages_logo.svg')}}" alt="" height="40" width="30" >
+    <button type="button" class="btn btn-primary btn-1" data-toggle="modal" data-target="#chatbotModal">
+        <img src="{{url('frontend/images/Google_Messages_logo.svg')}}" alt="" height="40" width="30">
     </button>
 
     <!-- Chatbot Modal -->
     <div class="modal fade" id="chatbotModal" tabindex="-1" aria-labelledby="chatbotModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-sm modal-dialog-bottom-right">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="chatbotModalLabel">Chat Support</h5>
-
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -33,7 +32,7 @@
                     <input type="text" id="userInput" class="form-control" placeholder="Type a message...">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" onclick="sendMessage()">Send</button>
+                    <button type="submit" class="btn btn-primary" onclick="sendMessage()">Send</button>
                 </div>
             </div>
         </div>
@@ -43,6 +42,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </body>
 </html>

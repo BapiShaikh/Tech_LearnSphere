@@ -46,10 +46,15 @@ body{
         margin-top: 1rem;
     }
 }
+.com-img{
+    border-radius: 50%;
+    height:100px;
+}
 #image-caption{
     font-style: normal;
     font-size: 1rem;
     margin-top: 0.5rem;
+
 }
 @media(max-width:767px){
     #image-caption{

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\Auth;
+
 
 
 
@@ -17,50 +17,7 @@ class LoginController extends Controller
     {
         return view('frontend.login');
     }
-    // public function admindisplay_data(): View
-    // {
 
-    //     $alldata = DB::table('project_data')->get();
-
-
-    //     return view('admindisplay')->with(['allInfo' => $alldata, 'user' => 'CLIENT']);
-    // }
-
-
-    // public function login_data(Request $request)
-    // {
-    //     $email = $request->input('email');
-    //     $password = $request->input('password');
-
-    //     // Fetching user data based on email or phone
-    //     $data = DB::table('project_data')
-    //                 ->where('email', $email)
-    //                 ->orWhere('phone', $email)
-    //                 ->first();
-
-    //     // Check if user exists
-    //     if (!$data) {
-    //         return redirect('/login')->with('message', 'User not found');
-    //     }
-
-    //     // Verify password
-    //     $password_db = $data->password;
-    //     if ($password_db != $password) {
-    //         return redirect('/login')->with('message', 'Password does not match');
-    //     }
-
-    //     // Set session and redirect based on user role
-    //     $user_type = $data->user;
-    //     if ($user_type == 'ADMIN') {
-    //         // If user is admin, redirect back to login with a message
-    //         return redirect('/admindisplay');
-    //     } else {
-    //         // If user is client, proceed with setting session and redirection
-    //         $uid = $data->user_id;
-    //         $request->session()->put('session_id', $uid);
-    //         return redirect('/display');
-    //     }
-    // }
     public function admindisplay_data(Request $request)
     {
         $id=session()->get('user_id');
@@ -144,18 +101,6 @@ class LoginController extends Controller
         }
     }
 
-    // public function profile()
-    // {
-    //     $userId = session()->get('session_id');
-
-    //     if (!$userId) {
-    //         return redirect('/login');
-    //     }
-
-    //     $allInfo = DB::table('project_data')->where('user_id', $userId)->get();
-
-    //     return view('profile', ['allInfo' => $allInfo]);
-    // }
 
     public function comment_index()
     {
@@ -167,52 +112,17 @@ class LoginController extends Controller
         $request->validate([
             'comment' => 'required|string|max:255',
         ]);
-
-        DB::table('commentdata')->insert(['comment' => $request->input('comment')]);
-
-        $allData = DB::table('commentdata')->get();
-
-        return view('review', ['commentinfo' => $allData]);
-    }
-
-    // public function subscribe(Request $request)
-    // {
-    //     $request->validate(['email' => 'required|email']);
-
-    //     $email = $request->input('email');
-    //     $userId = session()->get('session_id');
-
-    //     if (!$userId) {
-    //         return redirect('/login');
-    //     }
-
-    //     $user = DB::table('project_data')->where('email', $email)->where('user_id', $userId)->first();
-
-    //     if (!$user) {
-    //         return redirect('/login')->with('message', 'User not found');
-    //     } else {
-    //         return redirect('/home')->with('message1', 'Subscribed');
-    //     }
-    // }
+        $name=session()->get('name');
 
 
-    public function buyNow()
-    {
-        // Check if the user is authenticated
-        if (!Auth::check()) {
-            return redirect('/login'); // Redirect to login page if not authenticated
-        }
+        $image=session()->get('image');
+        if(isset($name)){
+            DB::table('commentdata')->insert(['comment' => $request->input('comment'),'image'=>$image,'name'=>$name]);
+            $allData = DB::table('commentdata')->get();
 
-        // Check if the authenticated user's data exists in the user_profiles table
-        $user = Auth::user();
-        $userProfile = DB::table('project_data')->where('user_id', $user->id)->first();
-
-        if (!$userProfile) {
-            // Redirect to login page if user data does not exist in the database
+            return view('review', ['commentinfo' => $allData])->with(['name'=>$name,'image'=>$image]);
+        }else{
             return redirect('/login');
-        }
-
-        // If authenticated and user data exists, proceed with the "Buy Now" logic
-        return view('buy-now'); // Replace 'buy-now' with your actual view name
     }
 }
+    }

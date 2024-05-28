@@ -73,7 +73,7 @@
                           Remember me
                         </label>
                       </div>
-                      <a href="" class="text-white">Forgot Password</a>
+                      
                     </div>
 
 

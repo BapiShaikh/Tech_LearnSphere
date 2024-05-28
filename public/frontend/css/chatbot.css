@@ -1,36 +1,55 @@
-.modal-dialog-bottom-right {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 0;
-    max-width: 300px;
-    width: 100%;
-  }
-
-  #chatbox {
-    height: 300px;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-  }
-
-  #messages {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  #userInput {
-    margin-top: 10px;
-  }
-  .btn-1{
+.btn-1 {
     border-radius: 50%;
-  }
-  .modal-title {
-    font-size: 1.25em;
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+}
 
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+
+.modal-dialog {
+    margin: 0 auto;
+}
+/* CSS for left-aligned user messages */
+.message-left {
+    float: left;
+    clear: both;
+    background-color: #f3f3f3;
     color: #333;
-    margin-left: 62px;
-  }
-  .modal-content{
-    margin-right: 20px;
-  }
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    max-width: 70%;
+}
+
+/* CSS for right-aligned bot messages */
+.message-right {
+    float: right;
+    clear: both;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    max-width: 70%;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 576px) {
+    .message-left,
+    .message-right {
+        max-width: 90%;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .modal-dialog {
+        max-width: 90%;
+        margin: auto;
+    }
+}

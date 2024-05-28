@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="{{ url('frontend/css/style.css') }}">
-  //  <link rel="stylesheet" href="{{ url('frontend/css/about.css') }}">
+
     <link rel="stylesheet" href="{{ url('frontend/css/contact.css') }}">
 
 
@@ -16,7 +16,7 @@
     <style>
       /* Style the search bar (you can customize this as needed) */
       .search-bar {
-          display: none; /* Initially hide the search bar */
+          display: none;
       }
       .cir{
         border-radius:50%;
@@ -29,21 +29,26 @@
       }
       .guest {
         display: flex;
-        justify-content: flex-end; /* Align the container to the right */
+        justify-content: flex-end;
     }
 
     .right-corner {
-        display: flex; /* Use flexbox to position elements side by side */
+        display: flex;
     }
 
     .right-corner > * {
-        margin-left: 10px; /* Add some spacing between the elements */
+        margin-left: 10px;
     }
     .sticky-navbar {
         position: sticky;
         top: 0;
-        z-index: 1020; /* Ensure it stays on top of other elements */
+        z-index: 1020;
+        background-color: white;
 
+      }
+      .con{
+        width:35%;
+        height:90vh;
       }
   </style>
 
@@ -82,7 +87,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdownResources">
               <a class="dropdown-item" href="{{url('course')}}">Course</a>
               <a class="dropdown-item" href="{{url('article')}}">Article</a>
-              <a class="dropdown-item" href="{{url('career')}}">Career</a>
+              <a class="dropdown-item" href="{{url('signup')}}">SignUp</a>
               <div class="dropdown-divider"></div>
               <div class="dropdown-submenu">
                 <a class="dropdown-item " href="#" id="navbarDropdownFeatures" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -109,7 +114,7 @@
     <div class="cir-text">
       {{session()->get('name')}}
   </div>
-      <img src="{{session()->get('image')}}" alt="" width="50" class="cir">
+      <img src="{{session()->get('image')}}" alt="" height="50" width="50" class="cir">
       <a href="{{url('logout')}}" class="btn btn-danger my-2 my-sm-0" id="logout" type="submit">Logout</a>
       @else
       <div class="guest">
@@ -146,7 +151,7 @@
   </div>
 
 
-  <div class="container_1">
+  <div class="container_1 con">
 
     <h2 class="modal-title label-text">Contact Us</h2>
     <form method="post" action="{{url('/contactus')}}">
@@ -168,36 +173,11 @@
             <input type="email" name="email" id="email" placeholder="Enter email" class="form-control">
         </div>
         <div class="form-group">
-            <label for="gender" class="label-text">Gender</label>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="gender" id="male" value="male">
-                <label class="form-check-label label-text" for="male">Male</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
-                <label class="form-check-label label-text" for="female">Female</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="gender" id="others" value="others">
-                <label class="form-check-label label-text" for="others">Others</label>
-            </div>
+            <label for=""><b>How can we help you?</b></label>
+            <input type="text" name="help" placeholder="Tell us few words about you" class="form-control">
         </div>
 
-        <div class="form-group">
-            <label for="" class="label-text">Language</label><br>
-            <div class="form-check form-check-inline">
-                <input type="checkbox" name="language" value="bengali" class="form-check-input">
-                <label class="form-check-label label-text">Bengali</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input type="checkbox" name="language" value="hindi" class="form-check-input">
-                <label class="form-check-label label-text">Hindi</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input type="checkbox" name="language" value="english" class="form-check-input">
-                <label class="form-check-label label-text">English</label>
-            </div>
-        </div>
+
         <button type="submit" class="btn btn-primary btn-block">Submit</button>
     </form>
 </div>
@@ -218,85 +198,85 @@
 
     <!-- Footer -->
     <footer class="text-center text-lg-start text-white" style="background-color: #b8acac">
-      <div class="container p-4">
-        <section class="">
-          <div class="row">
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Tech_LearnSphere</h6>
-              <p>
-                "Empowering Minds" suggests that the academy aims to equip students with the knowledge, skills, and confidence to navigate the complexities of the world.</p>
-            </div>
+        <div class="container p-4">
+          <section class="">
+            <div class="row">
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Tech_LearnSphere</h6>
+                <p>
+                  "Empowering Minds" suggests that the academy aims to equip students with the knowledge, skills, and confidence to navigate the complexities of the world.</p>
+              </div>
 
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-              <p>
-                <a href="{{url('course')}}" class="text-white">HTML</a>
-              </p>
-              <p>
-                <a href="{{url('course')}}" class="text-white">CSS</a>
-              </p>
-              <p>
-                <a href="{{url('course')}}" class="text-white">JavsScript</a>
-              </p>
-              <p>
-                <a href="{{url('course')}}" class="text-white">PHP</a>
-              </p>
-            </div>
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                <p>
+                  <a href="{{url('course')}}" class="text-white">HTML</a>
+                </p>
+                <p>
+                  <a href="{{url('course')}}" class="text-white">CSS</a>
+                </p>
+                <p>
+                  <a href="{{url('course')}}" class="text-white">JavsScript</a>
+                </p>
+                <p>
+                  <a href="{{url('course')}}" class="text-white">PHP</a>
+                </p>
+              </div>
 
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Useful Links</h6>
-              <p>
-                <a href="{{url('contact')}}" class="text-white">Contact Us</a>
-              </p>
-              <p>
-                <a href="{{url('about')}}" class="text-white">About</a>
-              </p>
-              <p>
-                <a href="{{url('article')}}" class="text-white">Article</a>
-              </p>
-              <p>
-                <a href="{{url('guide')}}" class="text-white">Features</a>
-              </p>
-            </div>
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Useful Links</h6>
+                <p>
+                  <a href="{{url('contact')}}" class="text-white">Contact Us</a>
+                </p>
+                <p>
+                  <a href="{{url('about')}}" class="text-white">About</a>
+                </p>
+                <p>
+                  <a href="{{url('article')}}" class="text-white">Article</a>
+                </p>
+                <p>
+                  <a href="{{url('guide')}}" class="text-white">Features</a>
+                </p>
+              </div>
 
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-              <p><i class="bi bi-house-door mr-3"></i> Kolkata, 700091, West Bengal</p>
-              <p><i class="bi bi-envelope mr-3"></i> abc@gmail.com</p>
-              <p><i class="bi bi-phone mr-3"></i> +91 9330550637</p>
-              <p><i class="bi bi-phone mr-3"></i> +91 7586943171</p>
-            </div>
-          </div>
-        </section>
-
-        <hr class="my-3">
-
-        <section class="p-3">
-          <div class="row d-flex align-items-center">
-            <div class="col-md-7 col-lg-8 text-center text-md-start">
-              <div class="p-3">
-
-                <p class="text-white">© 2024 Copyright: Tech_LearnSphere</p>
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                <p><i class="bi bi-house-door mr-3"></i> Kolkata, 700091, West Bengal</p>
+                <p><i class="bi bi-envelope mr-3"></i> abc@gmail.com</p>
+                <p><i class="bi bi-phone mr-3"></i> +91 9330550637</p>
+                <p><i class="bi bi-phone mr-3"></i> +91 7586943171</p>
               </div>
             </div>
-            <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-              <a href="https://www.facebook.com/" target='_blank' class="btn btn-outline-primary btn-floating m-1" role="button">
-                <i class="bi bi-facebook"></i>
-              </a>
-              <a href="http://www.linkedin.com/in/bapi-shaikh-023a221b7" target='_blank' class="btn btn-outline-info btn-floating m-1" role="button">
-                  <i class="bi bi-linkedin"></i>
-              </a>
-              <a href="https://www.google.com/" target='_blank' class="btn btn-outline-danger btn-floating m-1" role="button">
-                <i class="bi bi-google"></i>
-              </a>
-              <a href="https://www.instagram.com/" target='_blank' class="btn btn-outline-success btn-floating m-1" role="button">
-                <i class="bi bi-instagram"></i>
-              </a>
+          </section>
+
+          <hr class="my-3">
+
+          <section class="p-3">
+            <div class="row d-flex align-items-center">
+              <div class="col-md-7 col-lg-8 text-center text-md-start">
+                <div class="p-3">
+
+                  <p class="text-white">© 2024 Copyright: Tech_LearnSphere</p>
+                </div>
+              </div>
+              <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                <a href="https://www.facebook.com/" target='_blank' class="btn btn-outline-primary btn-floating m-1"  style="background-color: #1877F2; color: white;" role="button">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="http://www.linkedin.com/in/bapi-shaikh-023a221b7" target='_blank' class="btn btn-outline-info btn-floating m-1"  style="background-color: #0077B5; color: white;" role="button">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://www.google.com/" target='_blank' class="btn btn-outline-danger btn-floating m-1" style="background: linear-gradient(45deg, #4285F4, #EA4335, #FBBC05, #34A853); color: white;" role="button">
+                  <i class="bi bi-google"></i>
+                </a>
+                <a href="https://www.instagram.com/" target='_blank' class="btn btn-outline-success btn-floating m-1" style="background: linear-gradient(45deg, #FFD600, #FF6C00, #DD2A7B, #8134AF, #515BD4); color: white;"role="button">
+                  <i class="bi bi-instagram"></i>
+                </a>
+              </div>
             </div>
-          </div>
-        </section>
-      </div>
-    </footer>
+          </section>
+        </div>
+      </footer>
 
     <!-- Footer -->
   </div>
@@ -306,10 +286,5 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
-
-
-
 </body>
 </html>

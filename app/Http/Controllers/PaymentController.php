@@ -56,16 +56,24 @@ class PaymentController extends Controller
             $api->utility->verifyPaymentSignature($attributes);
 
             // Payment is successful, handle the business logic here
-            return view('payment-success'); // Your success view
+             return view('payment-success'); // Your success view
+
         } catch (\Exception $e) {
+
             return view('payment-failure'); // Your failure view
+
         }
+
     }
 
     // Handle payment failure
     public function handleFailure(Request $request)
     {
         // Handle payment failure
+
         return view('payment-failure'); // Your failure view
+
+
     }
+
 }

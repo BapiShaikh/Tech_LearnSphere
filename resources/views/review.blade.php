@@ -6,21 +6,31 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url('frontend/css/review.css') }}">
+    <link rel="stylesheet" href="{{ url('frontend/css/course.css') }}">
 </head>
 <body>
+    <header>
+        <a href="{{url('home')}}"><img src="{{url('frontend/images/image.jpg')}}" alt="Your Logo" class="logo"></a>
+    </header>
     @if(isset($commentinfo) && $commentinfo->count() > 0)
     <div class="container">
         <div id="demo" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 @foreach($commentinfo as $index => $all)
+
                 <div class="carousel-item @if($index == 0) active @endif">
                     <div class="carousel-caption">
                         <p>{{ $all->comment }}</p>
-                        <img src="{{ url('frontend/images/Souparna.jpg') }}" alt="Image">
-                        <div id="image-caption">Souparna</div>
+                        @if(session()->has('name'))
+
+
+                        <img src="{{$all->image}}" class="com-img"  alt="Image" width="50">
+                        <div id="image-caption" >{{$all->name}}</div>
+                        @endif
                     </div>
                 </div>
                 @endforeach
+
             </div>
             <a class="carousel-control-prev" href="#demo" data-slide="prev">
                 <span class="carousel-control-prev-icon"></span>

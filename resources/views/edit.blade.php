@@ -15,7 +15,7 @@
     <style>
       /* Style the search bar (you can customize this as needed) */
       .search-bar {
-          display: none; /* Initially hide the search bar */
+          display: none;
       }
   </style>
 </head>
@@ -38,6 +38,9 @@
               <img src="https://images.unsplash.com/photo-1639548538099-6f7f9aec3b92?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Sample photo" class="img-fluid" id="animated-img"
                 style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+                <div class="card signup-card">
+                    <p> Welcome to Tech_LearnSphere family</p>
+                 </div>
             </div>
             <div class="col-xl-6 registration">
               <div class="card-body p-md-5 text-black">
@@ -94,31 +97,7 @@
                   <label class="form-label" for="form3Example8">Age</label>
                 </div>
 
-                <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
 
-                  <!-- <h6 class="mb-0 me-4">Gender: </h6> -->
-                  <label class="form-label" for="form3Example8">Gender&nbsp;&nbsp;</label>
-
-                  <div class="form-check form-check-inline mb-0 me-4">
-                    <input class="form-check-input" type="radio" name="gender" id="femaleGender"
-                         value="female" {{ $editInfo->gender == 'female' ? 'checked' : ''}}>
-
-                    <label class="form-check-label" for="femaleGender">Female</label>
-                  </div>
-
-                  <div class="form-check form-check-inline mb-0 me-4">
-                    <input class="form-check-input" type="radio" name="gender" id="maleGender"
-                      value="male" {{ $editInfo->gender == 'male' ? 'checked' : ''}}>
-                    <label class="form-check-label" for="maleGender">Male</label>
-                  </div>
-
-                  <div class="form-check form-check-inline mb-0">
-                    <input class="form-check-input" type="radio" name="gender" id="otherGender"
-                      value="other" {{ $editInfo->gender == 'other' ? 'checked' : ''}}>
-                    <label class="form-check-label" for="otherGender">Other</label>
-                  </div>
-
-                </div>
 
                 <div class="form-row">
                     <div class="form-group">
@@ -170,8 +149,8 @@
                 </div>
 
                 <div class="d-flex justify-content-end pt-3">
-                  <button  type="reset"  class="btn btn-outline-danger btn-lg button_reset">Reset all</button>
-                  <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-success btn-lg ms-2 button_submit">Submit form</button>
+                  <button  type="reset"  class="btn btn-danger btn-lg button_reset">Reset all</button>
+                  <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-success btn-lg ms-2 button_submit">Update form</button>
                 </div>
 
               </div>
@@ -189,91 +168,90 @@
 
     <!-- Remove the container if you want to extend the Footer to full width. -->
     <div class="container-fluid">
-      <!-- Footer -->
-      <footer class="text-center text-lg-start text-white" style="background-color: #b8acac">
-        <div class="container p-4">
-          <section class="">
-            <div class="row">
-              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Company Name</h6>
-                <p>
-                  Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </p>
-              </div>
 
-              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-                <p>
-                  <a href="#" class="text-white">MDBootstrap</a>
-                </p>
-                <p>
-                  <a href="#" class="text-white">MDWordPress</a>
-                </p>
-                <p>
-                  <a href="#" class="text-white">BrandFlow</a>
-                </p>
-                <p>
-                  <a href="#" class="text-white">Bootstrap Angular</a>
-                </p>
-              </div>
+        <!-- Footer -->
+        <footer class="text-center text-lg-start text-white" style="background-color: #b8acac">
+          <div class="container p-4">
+            <section class="">
+              <div class="row">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Tech_LearnSphere</h6>
+                  <p>
+                    "Empowering Minds" suggests that the academy aims to equip students with the knowledge, skills, and confidence to navigate the complexities of the world.</p>
+                </div>
 
-              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Useful Links</h6>
-                <p>
-                  <a href="#" class="text-white">Your Account</a>
-                </p>
-                <p>
-                  <a href="#" class="text-white">Become an Affiliate</a>
-                </p>
-                <p>
-                  <a href="#" class="text-white">Shipping Rates</a>
-                </p>
-                <p>
-                  <a href="#" class="text-white">Help</a>
-                </p>
-              </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                  <p>
+                    <a href="{{url('course')}}" class="text-white">HTML</a>
+                  </p>
+                  <p>
+                    <a href="{{url('course')}}" class="text-white">CSS</a>
+                  </p>
+                  <p>
+                    <a href="{{url('course')}}" class="text-white">JavsScript</a>
+                  </p>
+                  <p>
+                    <a href="{{url('course')}}" class="text-white">PHP</a>
+                  </p>
+                </div>
 
-              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                <p><i class="bi bi-house-door mr-3"></i> Kolkata, 700004, West Bengal</p>
-                <p><i class="bi bi-envelope mr-3"></i> abc@gmail.com</p>
-                <p><i class="bi bi-phone mr-3"></i> +1234567890</p>
-                <p><i class="bi bi-printer mr-3"></i> +1234567890</p>
-              </div>
-            </div>
-          </section>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Useful Links</h6>
+                  <p>
+                    <a href="{{url('contact')}}" class="text-white">Contact Us</a>
+                  </p>
+                  <p>
+                    <a href="{{url('about')}}" class="text-white">About</a>
+                  </p>
+                  <p>
+                    <a href="{{url('article')}}" class="text-white">Article</a>
+                  </p>
+                  <p>
+                    <a href="{{url('guide')}}" class="text-white">Features</a>
+                  </p>
+                </div>
 
-          <hr class="my-3">
-
-          <section class="p-3">
-            <div class="row d-flex align-items-center">
-              <div class="col-md-7 col-lg-8 text-center text-md-start">
-                <div class="p-3">
-                  © 2024 Copyright:
-                  <a class="text-white" href="https://www.youtube.com/">Youtube.com</a>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                  <p><i class="bi bi-house-door mr-3"></i> Kolkata, 700091, West Bengal</p>
+                  <p><i class="bi bi-envelope mr-3"></i> abc@gmail.com</p>
+                  <p><i class="bi bi-phone mr-3"></i> +91 9330550637</p>
+                  <p><i class="bi bi-phone mr-3"></i> +91 7586943171</p>
                 </div>
               </div>
-              <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-                <a href="https://www.facebook.com/" class="btn btn-outline-primary btn-floating m-1" role="button">
-                  <i class="bi bi-facebook"></i>
-                </a>
-                <a href="#" class="btn btn-outline-info btn-floating m-1" role="button">
-                  <i class="bi bi-twitter"></i>
-                </a>
-                <a href="#" class="btn btn-outline-danger btn-floating m-1" role="button">
-                  <i class="bi bi-google"></i>
-                </a>
-                <a href="#" class="btn btn-outline-success btn-floating m-1" role="button">
-                  <i class="bi bi-instagram"></i>
-                </a>
-              </div>
-            </div>
-          </section>
-        </div>
-      </footer>
+            </section>
 
-      <!-- Footer -->
-    </div>
+            <hr class="my-3">
+
+            <section class="p-3">
+              <div class="row d-flex align-items-center">
+                <div class="col-md-7 col-lg-8 text-center text-md-start">
+                  <div class="p-3">
+
+                    <p class="text-white">© 2024 Copyright: Tech_LearnSphere</p>
+                  </div>
+                </div>
+                <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                  <a href="https://www.facebook.com/" target='_blank' class="btn btn-outline-primary btn-floating m-1" role="button">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                  <a href="http://www.linkedin.com/in/bapi-shaikh-023a221b7" target='_blank' class="btn btn-outline-info btn-floating m-1" role="button">
+                      <i class="bi bi-linkedin"></i>
+                  </a>
+                  <a href="https://www.google.com/" target='_blank' class="btn btn-outline-danger btn-floating m-1" role="button">
+                    <i class="bi bi-google"></i>
+                  </a>
+                  <a href="https://www.instagram.com/" target='_blank' class="btn btn-outline-success btn-floating m-1" role="button">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </footer>
+        <!-- Footer -->
+      </div>
     <!-- End of .container -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js" integrity="sha512-R9X6QeQwXC7yVCCTA6qLRATaKJ1kzV6sDRGMqDx/GvT6k1IapFl7R6GEl7yeZDTvE7zzTssUKC3Z9PtYNvT3Dw==" crossorigin="anonymous"></script>

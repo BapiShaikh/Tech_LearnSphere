@@ -6,25 +6,18 @@
     <title>E-learning website</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ url('frontend/css/style.css') }}">
-
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
-
-
     <style>
-      /* Style the search bar (you can customize this as needed) */
       .search-bar {
-          display: none; /* Initially hide the search bar */
+          display: none;
       }
       /* Sticky navbar style */
       .sticky-navbar {
         position: sticky;
         top: 0;
-        z-index: 1020; /* Ensure it stays on top of other elements */
+        z-index: 1020;
 
       }
       .s{
@@ -36,20 +29,20 @@
         margin-right: 10px;
       }
       .cir-text{
-
+        font-weight: 700;
         margin-right: 5px;
       }
       .guest {
         display: flex;
-        justify-content: flex-end; /* Align the container to the right */
+        justify-content: flex-end;
     }
 
     .right-corner {
-        display: flex; /* Use flexbox to position elements side by side */
+        display: flex;
     }
 
     .right-corner > * {
-        margin-left: 10px; /* Add some spacing between the elements */
+        margin-left: 10px;
     }
   </style>
   </head>
@@ -86,7 +79,7 @@
                       <div class="dropdown-menu" aria-labelledby="navbarDropdownResources">
                         <a class="dropdown-item" href="{{url('course')}}">Course</a>
                         <a class="dropdown-item" href="{{url('article')}}">Article</a>
-                        <a class="dropdown-item" href="{{url('review')}}">Review</a>
+                        <a class="dropdown-item" href="{{url('signup')}}">SignUp</a>
                         <div class="dropdown-divider"></div>
                         <div class="dropdown-submenu">
                           <a class="dropdown-item" href="#" id="navbarDropdownFeatures" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -116,7 +109,7 @@
                   <div class="cir-text">
                     {{session()->get('name')}}
                 </div>
-                    <img src="{{session()->get('image')}}" alt="" width="50" class="cir">
+                    <img src="{{session()->get('image')}}" alt="" height="50" width="50" class="cir">
                     <a href="{{url('logout')}}" class="btn btn-danger my-2 my-sm-0" id="logout" type="submit">Logout</a>
                     @else
                     <div class="guest">
@@ -237,36 +230,6 @@
                               </div>
                           </div>
                       </div>
-                      {{--  <div class="col-lg-2">
-                        <div class="card course-card">
-                            <div>
-                                <img src="{{url('frontend/images/still-life-851328_1280.jpg')}}" alt="" class="img-fluid rounded-top">
-                            </div>
-                            <div class="card-body">
-                                <b>Website</b>
-                                <p class="card-text">
-                                    <b>Duration</b>
-                                    <b>Price</b>
-                                </p>
-                                <a href="{{url('course')}}"><button class="btn btn-outline-success btn-block">Enroll now</button></a>
-                            </div>
-                        </div>
-                    </div>
-                          <div class="col-lg-2">
-                              <div class="card course-card">
-                                  <div>
-                                      <img src="{{url('frontend/images/still-life-851328_1280.jpg')}}" alt="" class="img-fluid rounded-top">
-                                  </div>
-                                  <div class="card-body">
-                                      <b>Website</b>
-                                      <p class="card-text">
-                                          <b>Duration</b>
-                                          <b>Price</b>
-                                      </p>
-                                      <a href="{{url('course')}}"><button class="btn btn-outline-success btn-block">Enroll now</button></a>
-                                  </div>
-                              </div>
-                          </div>  --}}
                       </div>
                   </div>
 
@@ -337,37 +300,7 @@
                                 </div>
                             </div>
                         </div>
-                        {{--  <div class="col-lg-2">
-                          <div class="card course-card">
-                              <div>
-                                  <img src="{{url('frontend/images/na.jpg')}}" alt="" class="img-fluid rounded-top">
-                              </div>
-                              <div class="card-body">
-                                  <b>Website</b>
-                                  <p class="card-text">
-                                      <b>Duration</b>
-                                      <b>Price</b>
-                                  </p>
-                                  <a href="{{url('course')}}"><button class="btn btn-outline-success btn-block">Enroll now</button></a>
-                              </div>
-                          </div>
-                      </div>
 
-                          <div class="col-lg-2">
-                              <div class="card course-card">
-                                  <div>
-                                      <img src="{{url('frontend/images/li.jpg')}}" alt="" class="img-fluid rounded-top">
-                                  </div>
-                                  <div class="card-body">
-                                      <b>Website</b>
-                                      <p class="card-text">
-                                          <b>Duration</b>
-                                          <b>Price</b>
-                                      </p>
-                                      <a href="{{url('course')}}"><button class="btn btn-outline-success btn-block">Enroll now</button></a>
-                                  </div>
-                              </div>
-                          </div>  --}}
                       </div>
                   </div>
               </div>
@@ -452,23 +385,23 @@
               </div>
 
               <!-- Team Start -->
-              <div class="container-xxl py-5">
+              <div class="container-fluid py-2">
                 <div class="container">
                     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                         <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
                         <h1 class="mb-5">Expert Instructors</h1>
                     </div>
-                    <div class="row g-4">
-                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="row g-2">
+                        <div class="col-lg-2 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="team-item bg-light">
                                 <div class="overflow-hidden">
-                                    <img class="img-fluid" src="{{url('frontend/images/bapi_image.jpeg')}}" alt="">
+                                    <img class="img-fluid" src="{{url('frontend/images/bapi_image.jpeg')}}" alt="" height="50">
                                 </div>
                                 <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                                     <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                      <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
-                                      <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                      <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                                        <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                                        <a class="btn btn-sm-square btn-primary mx-1" href="http://www.linkedin.com/in/bapi-shaikh-023a221b7" target="_blank"><i class="bi bi-linkedin"></i></a>
+                                        <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank" style="background: linear-gradient(45deg, #FFD600, #FF6C00, #DD2A7B, #8134AF, #515BD4); color: white;"><i class="bi bi-instagram"></i></a>
                                     </div>
                                 </div>
                                 <div class="text-center p-4">
@@ -477,62 +410,98 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="col-lg-2 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="team-item bg-light">
                                 <div class="overflow-hidden">
-                                    <img class="img-fluid" src="{{url('frontend/images/dummy-image.jpg')}}" alt="">
+                                    <img class="img-fluid" src="{{url('frontend/images/Souparna.jpg')}}" alt="" height="50">
                                 </div>
                                 <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                                     <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                      <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                                        <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                                        <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                                        <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank" style="background: linear-gradient(45deg, #FFD600, #FF6C00, #DD2A7B, #8134AF, #515BD4); color: white;"><i class="bi bi-instagram"></i></a>
                                     </div>
                                 </div>
                                 <div class="text-center p-4">
-                                    <h5 class="mb-0">Instructor Name</h5>
-                                    <small>Designation</small>
+                                    <h5 class="mb-0">Souparna</h5>
+                                    <small>Developer</small>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="col-lg-2 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
                             <div class="team-item bg-light">
                                 <div class="overflow-hidden">
-                                    <img class="img-fluid" src="{{url('frontend/images/souparna1.jpg')}}" alt="">
+                                    <img class="img-fluid" src="{{url('frontend/images/sumon.jpg')}}" alt="" height="50">
                                 </div>
                                 <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                                     <div class="bg-light d-flex justify-content-center pt-2 px-1">
                                         <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
                                         <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                        <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                                        <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank" style="background: linear-gradient(45deg, #FFD600, #FF6C00, #DD2A7B, #8134AF, #515BD4); color: white;"><i class="bi bi-instagram"></i></a>
                                     </div>
                                 </div>
                                 <div class="text-center p-4">
-                                    <h5 class="mb-0">Souparna Biswas</h5>
+                                    <h5 class="mb-0">Sumon</h5>
                                     <small>Designer</small>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="col-lg-2 col-md-4 wow fadeInUp" data-wow-delay="0.7s">
                             <div class="team-item bg-light">
                                 <div class="overflow-hidden">
-                                    <img class="img-fluid" src="{{url('frontend/images/dummy-image.jpg')}}" alt="">
+                                    <img class="img-fluid" src="{{url('frontend/images/moumita.png')}}" alt="" height="50">
                                 </div>
                                 <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                                     <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                      <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
-                                      <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                      <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                                        <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                                        <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                                        <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank" style="background: linear-gradient(45deg, #FFD600, #FF6C00, #DD2A7B, #8134AF, #515BD4); color: white;"><i class="bi bi-instagram"></i></a>
                                     </div>
                                 </div>
                                 <div class="text-center p-4">
-                                    <h5 class="mb-0">Instructor Name</h5>
-                                    <small>Designation</small>
+                                    <h5 class="mb-0">Moumita</h5>
+                                    <small>Designer</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 wow fadeInUp" data-wow-delay="0.9s">
+                            <div class="team-item bg-light">
+                                <div class="overflow-hidden">
+                                    <img class="img-fluid" src="{{url('frontend/images/sayanti.png')}}" alt="" height="50">
+                                </div>
+                                <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                                    <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                        <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                                        <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                                        <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank" style="background: linear-gradient(45deg, #FFD600, #FF6C00, #DD2A7B, #8134AF, #515BD4); color: white;"><i class="bi bi-instagram"></i></a>
+                                    </div>
+                                </div>
+                                <div class="text-center p-4">
+                                    <h5 class="mb-0">Sayanti</h5>
+                                    <small>Designer</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 wow fadeInUp" data-wow-delay="1.1s">
+                            <div class="team-item bg-light">
+                                <div class="overflow-hidden">
+                                    <img class="img-fluid" src="{{url('frontend/images/sabanti.png')}}" alt="" height="50">
+                                </div>
+                                <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                                    <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                        <a class="btn btn-sm-square btn-primary mx-1" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                                        <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                                        <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/" target="_blank" style="background: linear-gradient(45deg, #FFD600, #FF6C00, #DD2A7B, #8134AF, #515BD4); color: white;"><i class="bi bi-instagram"></i></a>
+                                    </div>
+                                </div>
+                                <div class="text-center p-4">
+                                    <h5 class="mb-0">Srabanti</h5>
+                                    <small>Designer</small>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
   <!-- Team End -->
@@ -607,16 +576,16 @@
                 </div>
               </div>
               <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-                <a href="https://www.facebook.com/" target='_blank' class="btn btn-outline-primary btn-floating m-1" role="button">
+                <a href="https://www.facebook.com/" target='_blank' class="btn btn-outline-primary btn-floating m-1"  style="background-color: #1877F2; color: white;" role="button">
                   <i class="bi bi-facebook"></i>
                 </a>
-                <a href="http://www.linkedin.com/in/bapi-shaikh-023a221b7" target='_blank' class="btn btn-outline-info btn-floating m-1" role="button">
+                <a href="http://www.linkedin.com/in/bapi-shaikh-023a221b7" target='_blank' class="btn btn-outline-info btn-floating m-1"  style="background-color: #0077B5; color: white;" role="button">
                     <i class="bi bi-linkedin"></i>
                 </a>
-                <a href="https://www.google.com/" target='_blank' class="btn btn-outline-danger btn-floating m-1" role="button">
+                <a href="https://www.google.com/" target='_blank' class="btn btn-outline-danger btn-floating m-1" style="background: linear-gradient(45deg, #4285F4, #EA4335, #FBBC05, #34A853); color: white;" role="button">
                   <i class="bi bi-google"></i>
                 </a>
-                <a href="https://www.instagram.com/" target='_blank' class="btn btn-outline-success btn-floating m-1" role="button">
+                <a href="https://www.instagram.com/" target='_blank' class="btn btn-outline-success btn-floating m-1" style="background: linear-gradient(45deg, #FFD600, #FF6C00, #DD2A7B, #8134AF, #515BD4); color: white;"role="button">
                   <i class="bi bi-instagram"></i>
                 </a>
               </div>
@@ -640,6 +609,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="{{url('frontend/js/search.js')}}"></script>
-
 </body>
 </html>

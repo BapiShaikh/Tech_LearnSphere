@@ -25,14 +25,14 @@
   /* logo purpose */
   .logo {
     position: fixed;
-    top: 20px; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
-    width: 80px; /* Adjust the size of the circle */
-    height: 80px; /* Adjust the size of the circle */
-    border-radius: 50%; /* Make it circular */
-    background-color: #fff; /* Background color of the logo */
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
     overflow: hidden;
-    z-index: 1000; /* Set a high z-index to ensure the logo appears above other content */
+    z-index: 1000;
 }
 
 /* CSS to make the image fit inside the circle */
@@ -41,10 +41,9 @@
     height: auto;
 }
 
-/* Optional: Add a border and box shadow for styling */
 .logo {
-    border: 2px solid #333; /* Adjust border color and thickness as needed */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+    border: 2px solid #333;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .registration{
@@ -66,7 +65,7 @@ background-image: linear-gradient(315deg, #d99058 0%, #f8de7e 74%);
 
 /* Apply the fade-in animation to the image */
 #animated-img {
-    animation: fadeIn 1s ease-in-out; /* Change the duration and timing function as needed */
+    animation: fadeIn 1s ease-in-out;
 }
 
 /* Style for form container */
@@ -78,8 +77,8 @@ background-image: linear-gradient(315deg, #d99058 0%, #f8de7e 74%);
 /* Style for form group */
 .form-group {
     margin-bottom: 20px;
-    flex: 1 1 calc(50% - 10px); /* Equal width for each form group with some spacing */
-    margin-right: 20px; /* Spacing between form groups */
+    flex: 1 1 calc(50% - 10px);
+    margin-right: 20px;
 }
 
 /* Style for labels */
